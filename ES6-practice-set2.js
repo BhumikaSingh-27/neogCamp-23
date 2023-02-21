@@ -62,12 +62,17 @@ const printFirstCharacter = ([first])=> first
 console.log(printFirstCharacter([1, 2, 3, 5, 8]))// 1
 
 //7. Write a function to return the last 5 characters as an array from the given array.
-const printLastFive = ([first, ...rest]) =>{
-    let arr= []
-    for(let i=rest.length ; i>=5; i--){
-        arr.push(rest[i])
+const printLastFive = ([first, ...rest]) => {
+    const arr = []
+    let counter=0;
+    for(let i =rest.length-1;i>0;i--){
+        arr.unshift(rest[i])
+        counter++;
+        if (counter === 5) {
+            break;
+        }
     }
     return arr
 }
-console.log(printLastFive([0, 1, 1, 2, 3, 5, 8]))
-// [1, 2, 3, 5, 8]
+
+console.log(printLastFive([0, 1, 1, 2, 3, 5, 8,3,4]))
