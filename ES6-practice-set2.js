@@ -76,3 +76,102 @@ const printLastFive = ([first, ...rest]) => {
 }
 
 console.log(printLastFive([0, 1, 1, 2, 3, 5, 8,3,4]))
+
+const printLastFive = (arr) =>{
+    let newArr= [];
+    let counter = 0;
+    for(let i =arr.length-1;i>0;i--){
+        arr.push(arr[i])
+        counter++;
+        if (counter === 5) {
+            break;
+        }
+    }
+    return arr.reverse
+}
+
+//8. Write an ES6 function to return the second element of the given array by multiplying 20 to it.
+const printSecondCharacter = ([first, second, ...rest])=> second*20
+
+console.log(printSecondCharacter([1, 2, 3, 5, 8]))// 40
+
+//9. Write an ES6 function to return the second element of the given array by adding “Hello” before it.
+const sayHello = ([first, second, ...rest]) => `Hello ${second}`
+
+console.log(sayHello(["Akshay", "Sweta", "Prerana", "Vinay"]))// Hello Sweta
+console.log(sayHello(["Kanika", "Rakesh", "Prerana", "Puja"]))// Hello Rakesh
+
+//10. Write an ES6 function to return sum of all numbers at even indices of the given array.
+
+const sumOfEvenIndices = arr =>{
+    sum = 0;
+    for(let i=0; i<arr.length; i+=2){
+        sum+= arr[i]
+    }
+    return sum;
+}
+console.log(sumOfEvenIndices([2, 4, 3, 7, 1, 5])) // 6
+console.log(sumOfEvenIndices([12, 14, 3, 27, 15, 25])) // 30
+
+
+//11. Write an ES6 function to return the sum of only first 2 elements of the array.
+const sumFirstTwoElements = ([first,second,...rest]) => first+second
+
+console.log(sumFirstTwoElements([10, 4, 3, 7, 1, 5])) // 14
+console.log(sumFirstTwoElements([12, 14, 3, 27, 15])) // 26
+
+//12. Write an ES6 function to return the first element which is a multiple of 5 in the given array.
+const printMultipleOfFive = arr =>{
+    for(let num of arr){
+        if (num%5 === 0){
+            return num
+        }
+    }
+}
+
+console.log(printMultipleOfFive([7, 4, 10, 7, 5, 3])) // 10
+console.log(printMultipleOfFive([7, 5, 10, 7, 15, 3])) // 5
+
+
+// 13. Create a function which takes in the given object and returns another object only with the properties postalCode and city in it.
+const getAddress = ({postalCode,city}) =>({postalCode, city})
+
+const userData = {
+    name: 'Jane Doy',
+    postalCode: '12134',
+    city: 'Germany',
+  }
+  
+  console.log(getAddress(userData));
+  // {postalCode: '12134', city: 'Germany'}
+
+//14. Create a function which takes in the given object and returns a sentence which indicates name of the person and where the person lives.
+  
+const printData = ({name,country}) => `${name} lives in ${country}`
+const userData1 = {
+    name: 'Gaurav',
+    postalCode: '12134',
+    country: 'Japan',
+  }
+  console.log(printData(userData1)); // Gaurav lives in Japan
+  
+  
+  const userData2 = {
+    name: 'Pritam',
+    postalCode: '560223',
+    country: 'India',
+  }
+  console.log(printData(userData2)); // Pritam lives in India
+
+
+//15. Create a function which takes a product object and returns a sentence about the product using ES6 features.
+const printProductDetails = ({name,specification}) =>`${name} which is of ${specification.size} Inch, has a capacity of ${specification.capacity}.`
+const product = {
+    name: "Apple MacBook Air 2020",
+      specification: {
+          capacity: "256GB",
+        size: "13.3 Inch"
+      },
+    price: 82900
+  }
+  console.log(printProductDetails(product)); // Apple MacBook Air 2020 which is of 13.3 Inch, has a capacity of 256GB.
