@@ -81,13 +81,13 @@ const printLastFive = (arr) =>{
     let newArr= [];
     let counter = 0;
     for(let i =arr.length-1;i>0;i--){
-        arr.push(arr[i])
+        newArr.push(arr[i])
         counter++;
         if (counter === 5) {
             break;
         }
     }
-    return arr.reverse
+    return newArr.reverse()
 }
 
 //8. Write an ES6 function to return the second element of the given array by multiplying 20 to it.
@@ -175,3 +175,5 @@ const product = {
     price: 82900
   }
   console.log(printProductDetails(product)); // Apple MacBook Air 2020 which is of 13.3 Inch, has a capacity of 256GB.
+
+  //const printProductDetails=({name,specification:{size,capacity}})=>` ${name} which is of ${size}, has a capacity of ${capacity}.`

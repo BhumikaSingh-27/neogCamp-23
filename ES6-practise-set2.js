@@ -54,7 +54,7 @@ function add(a = 30, b = 0) {
 
 console.log(add(2, 3));
 
-const add = (a=20,b=0) => a+b
+const add = (a=30,b=0) => a+b
 
 
 //7. Write an ES6 function combineObjects with least amount of characters which merges two objects into one.

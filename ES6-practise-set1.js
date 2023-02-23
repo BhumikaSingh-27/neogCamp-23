@@ -40,8 +40,25 @@ console.log(isEvenOdd(10)) // Even Number
 //5. Write a function that takes a string as input and determines if it contains the letter 'a' or ‘A’.
 
 const checkForAlphabetA = str => str.split("").includes("a"||"A") ? "includes A": "doesnot include A"
-
+const checkForAlphabetA = str =>{
+    let flag=0
+    for(let i=0;i<str.length;i++){
+       
+        if(str[i] === 'a' || str[i] ==='A'){
+            flag=1
+            break;
+        }
+    }
+    if(flag===1){
+        return (`Includes A`)
+    }
+    else{
+        return(`Doesnot includes A`)
+    }
+}
 console.log(checkForAlphabetA("Tanay")) // Includes a 
+console.log(checkForAlphabetA("Jeep")) // Does not include a 
+console.log(checkForAlphabetA("Jane")) // Includes a sole.log(checkForAlphabetA("Tanay")) // Includes a 
 console.log(checkForAlphabetA("Jeep")) // Does not include a 
 console.log(checkForAlphabetA("Jane")) // Includes a 
 
@@ -54,7 +71,7 @@ console.log(checkLength("Jeep")) // less than 5 characters
 
 
 //7. Write a function that takes a number as input and determines if it is between 1 and 10.
-const isBetweenOneAndTen = num => num>1 && num<10 ? true : false;
+const isBetweenOneAndTen = num => num>0 && num<=10 ? true : false;
 
 console.log(isBetweenOneAndTen(5)); // true
 console.log(isBetweenOneAndTen(11)); // false
@@ -129,7 +146,7 @@ const numbers = [1,2,3]
 const [a,b,c] = numbers
 console.log(a,b,c)
 
-//Convert the given function into ES6 with least amount of characters.
+//15. Convert the given function into ES6 with least amount of characters.
 function defaultParamsFunc(a, b, c) {
     if (c === undefined) {
         c = 4;
@@ -137,7 +154,7 @@ function defaultParamsFunc(a, b, c) {
     return a * b * c;
 	};
 	//or
-    
+
 const defaultParamsFunc = (a,b,c=4) => (a*b*c);
 console.log(defaultParamsFunc(3, 1)); // 12
 	console.log(defaultParamsFunc(3, 10)); // 120
