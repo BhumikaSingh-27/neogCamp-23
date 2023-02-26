@@ -44,6 +44,8 @@ let b = 2;
 
 [a,b] =[b,a]
 
+const swap = (a, b) => [a, b] = [b, a]
+
 console.log(a) // 2
 console.log(b) // 1
 
@@ -75,8 +77,8 @@ console.log(combinedObj);
 //     console.log(address); // New York
 // }
 
-const getData = ({name,address}) => { console.log(name)
-console.log(address.city)}
+const getData = ({name,address:{city}}) => { console.log(name)
+console.log(city)}
 
 const person = {
   name: 'John Doe',
@@ -87,14 +89,38 @@ const person = {
 };
 getData(person);
 
+//NOTE:  ({name, address:{city:myCity="Patna"}}) => { console.log(name, myCity)}
+//
 
 //9. Write a function that takes a string as input and returns the string in all uppercase letters.
-const stringToUpperCase = str =>str.toUpperCase()
-console.log(stringToUpperCase("hello")); // "HELLO"
+//const stringToUpperCase = str =>str.toUpperCase()
+
+const stringToUpperCase = str =>{
+  let code;
+  let newStr = ""
+  for(let i=0; i<str.length;i++){
+    code =  str[i].charCodeAt() -32
+   
+    if( str[i].charCodeAt()<92){
+        newStr+=str[i]
+        continue;
+    }
+    newStr+= String.fromCharCode(code)
+  }
+  return newStr
+}
+console.log(stringToUpperCase("hello")); // "
 
 //10. Write a function that takes two strings as input and concatenates them together.
-const concatenateStrings = (str1,str2) => str1+str2
-console.log(concatenateStrings("hello", "world")); // "helloworld"
+//const concatenateStrings = (str1,str2) => str1+str2
+
+const concatenateStrings = (str1,...str2) =>{
+  for(let str of str2){
+    str1+=str
+  }
+  return str1
+}
+console.log(concatenateStrings("hello", "world","bhumika")); // "helloworld"
 
 //11. Write a function that takes an array and returns the last element in the array.
 const lastElement = arr => arr[arr.length-1]

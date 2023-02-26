@@ -9,12 +9,12 @@ function isEligibleToVote(age) {
     }
 }
 
+//short-hand/ arrow function
+const isEligibleToVote = age => age>=18 ? "Eligible to vote" : " Not Eligible to vote";
+
 console.log(isEligibleToVote(20)) // Eligible to vote
 console.log(isEligibleToVote(18)) // Eligible to vote
 console.log(isEligibleToVote(17)) // Not eligible to vote
-
-//short-hand/ arrow function
-const isEligibleToVote = age => age>=18 ? "Eligible to vote" : " Not Eligible to vote";
 
 
 //2. Write a function that takes two numbers as input and determines which one is greater.
@@ -115,10 +115,23 @@ console.log(isBetweenOneAndTen(11)); // false
 const isHelloPresent = str => str.toLowerCase().indexOf("hello") === -1 ? false: true;
 
 const isHelloPresent = str =>{
-    const lowerStr = str[i].toLowerCase()
+    const check="hello" //hello world
+    let count = 0;
     for(let i=0;i<str.length;i++){
-        if( lowerStr[i] === "h"){
-            if()
+        for(let j=0;j<check.length;j++){
+            if( str[i].toLowerCase() === check[j]){
+                i++;
+                count++;
+                continue;
+            }else{
+                count=0;
+                break;
+            }
+        }
+        if(count===check.length){
+            return true;
+        } else{
+            return false;
         }
     }
 }
@@ -129,6 +142,14 @@ console.log(isHelloPresent("World")) // false
 //9. Write a function that takes a number as input and determines if it is a multiple of 3.
 const isMultipleOfThree = num => num%3 ===0 ? "multiple of 3" : "not a multiple of 3"
 
+const isMultipleOfThree = num =>{
+    if(num%3 ===0){
+        return `multiple of 3`
+    } else{
+        return `not a multiple of 3`
+    }
+}
+
 console.log(isMultipleOfThree(5)); // false
 console.log(isMultipleOfThree(9)); // true
 
@@ -136,6 +157,10 @@ console.log(isMultipleOfThree(9)); // true
 
 const multiplyByTen = num => num*10
 
+const mutipleByTen = num =>{
+    const result= num*10
+    return result
+}
 
 console.log(multiplyByTen(20)) // 200
 console.log(multiplyByTen(40)) // 400
