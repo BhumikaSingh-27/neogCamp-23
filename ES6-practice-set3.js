@@ -1,7 +1,7 @@
 //ES6+ Practice Question Set 3
 
 //1. Create a function that takes an array of strings as an argument and returns a string that includes the number of items in the array and the first and last items.
-const formatArray = ([first, ...rest]) => `The array has ${rest.length +1} and the first item is ${first}, and the last item is ${rest[rest.length -1]}`
+const formatArray = (str) => `The array has ${str.length} and the first item is ${str[0]}, and the last item is ${str[str.length -1]}`
 const items = ['apple', 'banana', 'orange'];
 const message = formatArray(items);
 console.log(message);
@@ -62,33 +62,44 @@ const printFirstCharacter = ([first])=> first
 console.log(printFirstCharacter([1, 2, 3, 5, 8]))// 1
 
 //7. Write a function to return the last 5 characters as an array from the given array.
-const printLastFive = ([first, ...rest]) => {
-    const arr = []
-    let counter=0;
-    for(let i =rest.length-1;i>0;i--){
-        arr.unshift(rest[i])
-        counter++;
-        if (counter === 5) {
-            break;
-        }
+// const printLastFive = ([first, ...rest]) => {
+//     const arr = []
+//     let counter=0;
+//     for(let i =rest.length-1;i>0;i--){
+//         arr.unshift(rest[i])
+//         counter++;
+//         if (counter === 5) {
+//             break;
+//         }
+//     }
+//     return arr
+// }
+
+
+
+// const printLastFive = (arr) =>{
+//     let newArr= [];
+//     let counter = 0;
+//     for(let i =arr.length-1;i>0;i--){
+//         newArr.push(arr[i])
+//         counter++;
+//         if (counter === 5) {
+//             break;
+//         }
+//     }
+//     return newArr.reverse()
+// }
+const printLastFive = (arr) =>{
+    let newArr = []
+    let j =0;
+    for(let i=i<arr.length-5;i<arr.length;i++){
+        newArr[j]=arr[i];
+        j++;
     }
-    return arr
+    return newArr
 }
 
 console.log(printLastFive([0, 1, 1, 2, 3, 5, 8,3,4]))
-
-const printLastFive = (arr) =>{
-    let newArr= [];
-    let counter = 0;
-    for(let i =arr.length-1;i>0;i--){
-        newArr.push(arr[i])
-        counter++;
-        if (counter === 5) {
-            break;
-        }
-    }
-    return newArr.reverse()
-}
 
 //8. Write an ES6 function to return the second element of the given array by multiplying 20 to it.
 const printSecondCharacter = ([first, second, ...rest])=> second*20
