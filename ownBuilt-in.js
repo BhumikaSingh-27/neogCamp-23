@@ -40,3 +40,9 @@ const myConcat = (a, ...b) => {
   }
   return a;
 };
+
+//myIndexOf
+
+const myIndexOf = str =>{
+    
+}
