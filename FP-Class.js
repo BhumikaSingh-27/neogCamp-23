@@ -1,6 +1,80 @@
 // // Take an object with your mother’s name and your age. Now create an object for your sibling by age difference
-// const bhumika = {name:""}
+const bhumika = {name:"Savita", age:27}
+const sks = {...bhumika, age: bhumika.age-3}
 
+console.log(sks)
+console.log(bhumika)
+
+//create a function that takes object and returns an updated new object
+
+const birthday = person => ({...person, age: person.age+1})
+
+console.log(birthday ({name:"bhumika",age:36}))
+
+
+//Write an ES6 function increaseStock() to take a products’s name and quantity in an object and then increase the quantity by 5.
+
+const increaseStock = product =>({...product, quantity: product.quantity+5})
+
+console.log(increaseStock({name:"notebook", quantity: 900}))
+
+//---------Map function-------------
+//Given an array of numbers, return a new array with square root of each number in it.
+const numbers =[1,2,3,4]
+const newNumbers = numbers.map(num => Math.sqrt(num))
+console.log(newNumbers)
+
+//Write an ES6 function that takes an array of strings and returns an array with the length of each string using the map method.
+
+const strLength = arrayOfStrings => arrayOfStrings.map((str) => str.length)
+console.log(strLength(["hello","kite"]))
+
+//Map-works with array of objects - eg; extract the names from obj
+const anArrayObject =[{name:"Tanay", age:27},{name:"Tanvi", age:20}]
+const extractNames = anArrayObject.map((obj)=>obj.name)
+console.log(extractNames)
+
+//---------------filter-----------------
+//to get the odd numbers in an array
+const numbers=[1,3,5,7,28,12]
+const isOdd = num => num%2 != 0 
+const checkOdd = numbers => numbers.filter(isOdd) //callback function should contain boolean values.
+console.log(checkOdd(numbers))
+
+// Write an ES6 function that returns an array with no number less than 10 in it.
+const checkLessThan = numbers => number>10
+const newArrayWithNumbersMoreThan10 = numbers => numbers.filter(checkLessThan)
+const numbers =[1,45,22,5,66]
+console.log(newArrayWithNumbersMoreThan10(numbers))
+
+//--------------Find------------
+// first element that satisfy the condition 
+//Write an ES6 function that takes an array, and returns the first even number in the array.
+const numbers = [5, 12, 8, 13, 44]
+
+const firstEven = num => num%2 === 0
+const checkFirstEven = numbers => numbers.find(firstEven)
+console.log(checkFirstEven(numbers))
+
+//Write an ES6 function that takes an array of fruits and returns the first fruit that is longer than 10 characters.
+const fruitArray = ['apple', 'banana', 'cherry', 'watermelon', 'pineapple']
+const getLength = str => str.length>=10
+const getFruitByLengthGreaterThan10 = fruitArray => fruitArray.find(getLength)
+console.log(getFruitByLengthGreaterThan10(fruitArray))
+
+//Given an array of objects, find the object with name “clips”.
+const inventory = [
+    { name: 'socks', quantity: 12 },
+    { name: 'shirts', quantity: 10 },
+    { name: 'clips', quantity: 5 },
+  ]
+
+  const checkForClicps = objectInventory => objectInventory.name === "clips"
+
+  const getInventory = object => object.find(checkForClips)
+  console.log(getInventory(inventory))
+
+//*********************************MA-PRACTICE QUESTIONS************************************************************ */
 // //Ankit Singhania — Today at 10:50 PM
 // Write a arrow function which takes an object and prints the particular sentence
 // My name is Ankit Singhania. I scored 99 in Math and 96 in Computer from ISC board.
