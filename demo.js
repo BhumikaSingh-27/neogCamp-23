@@ -26,61 +26,78 @@
 
 
 // Write a program using destructing to find a number in this object which is divisible both by 3 and 5
-//********incomplte****** */
 // const obj = {
 //     a: 10,
 //     b: 12,
 //     arr: [10, 8, 15, 14]
 // }
 
-// const checkDivisibility = num => num%3 ===0 && num%5 ===0
-
-// const getNumberBy3and5 = ({a,b,arr:array1}) => { checkDivisibility(a)} array1.find(checkDivisibility)
-
-// console.log(getNumberBy3and5(obj))
-
-
-// Write a function that takes the above object and returns a new array 
-// containing the company names.
-// Output: ['Chalo', 'Razorpay', 'No Broker']
+// const {a,b, arr} = obj
+// const array1 = [a,b,...arr]
+// const checkDivisibleBy = array =>array.filter(ele=>ele%3===0 && ele%5 ===0)
+// console.log(checkDivisibleBy(array1))
 
 
-
-
-// Write a function that takes the above object and returns a new array 
-// containing the company names for people having names starting with A.
-// Output: ['Chalo']
 // const obj = {
 //     details: [{name: 'Ankit', company: 'Chalo'},
 //                         {name: 'Rohan', company: 'Razorpay'},
 //                         {name: 'Shivam', company: 'No Broker'}
 //                          ]
 // }
+// Write a function that takes the above object and returns a new array 
+// containing the company names.
+// Output: ['Chalo', 'Razorpay', 'No Broker']
 
-// const getNameStartingByA = ({details}) => (details.filter(({name,company})=> (name[0]==='A'))).map(obj=>obj.company)
+// const getCompanyNames = ({details}) => details.map(obj=>obj.name)
+// console.log(getCompanyNames(obj))
 
-// console.log(getNameStartingByA(obj))
 
-//*********incomplete******* */
+
+// Write a function that takes the above object and returns a new array 
+// containing the company names for people having names starting with A.
+// Output: ['Chalo']
+
+// const getCompanyNameForPerson = ({details}) => details.filter(({name})=> name[0]==='A').map(obj=>obj.company)
+
+// console.log(getCompanyNameForPerson(obj))
+
+
+
 //Given an array of strings, write a program to return a new array containing only the strings that are palindromes.
 // Input: ["racecar", "banana", "level", "apple"]
 // Output: ["racecar", "level"]
 // const array = ["racecar", "banana", "level", "apple"]
-// const checkPalindrome = str => {
-//     while()
+//// const checkPalindrome = str =>{
+//   let i=0;
+//   let j=str.length-1;
+//     while(i<j){
+//     if(str[i]===str[j]){
+//       i++;
+//       j--;
+//       }
+//     else{
+//      return false
+//     }
+//   }
+//   return true
 // }
 // const getPalindromeString = array => array.filter(checkPalindrome)
-
 // console.log(getPalindromeString(array))
 
+
 //Given an array of objects, write a code for "getOutput" function to return the first object that contains a specific given key-value pair.
-eg: 
 
-const arr = [{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
-const key="age"
-const value=25
+// const arr = [{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
+// const key="age"
+// const value=25
 
-const checkKeyValue = (key,value) => key === key && value === value
-const getOutput = (arr,key,value) => arr.find(checkKeyValue)
-console.log(getOutput(arr,key,value)); // Output: {name: "John", age: 25}
+// const arr = [{name:"bhumi",age:25},{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
+// const key="age"
+// const value=25
+
+
+// const checkKeyValue = (obj,key,value) => obj[key] === value 
+// const getOutput = (arr,key,value) => arr.find((obj)=>checkKeyValue(obj,key,value))
+
+// console.log(getOutput(arr,key,value));  
 
