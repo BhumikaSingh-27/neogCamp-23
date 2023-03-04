@@ -153,6 +153,7 @@ const findStudent = (students) => students.find(({grade,scholarship}) => grade =
   return titleOfMovie
 
 }
-  
+const getBestOldBollywoodMovies = (bollywoodMovies) => bollywoodMovies.filter(({year, rating}) => year <1990 && rating > 8.0).map((movie)=>movie.title);
+ 
   const bestOldMovies = getBestOldBollywoodMovies(bollywoodMovies);
   console.log(bestOldMovies); // Output: ['Sholay', 'Parinda']
