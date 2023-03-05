@@ -87,17 +87,17 @@
 
 //Given an array of objects, write a code for "getOutput" function to return the first object that contains a specific given key-value pair.
 
-// const arr = [{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
-// const key="age"
-// const value=25
+const arr = [{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
+const key="age"
+const value=25
 
 // const arr = [{name:"bhumi",age:25},{name: "John", age: 25}, {name: "Sarah", age: 30}, {name: "Bob", age: 20}]
 // const key="age"
 // const value=25
 
 
-// const checkKeyValue = (obj,key,value) => obj[key] === value 
-// const getOutput = (arr,key,value) => arr.find((obj)=>checkKeyValue(obj,key,value))
+const checkKeyValue = (obj,key,value) => obj[key] === value 
+const getOutput = (arr,key,value) => arr.find((obj)=>checkKeyValue(obj,key,value))
 
-// console.log(getOutput(arr,key,value));  
+console.log(getOutput(arr,key,value));  
 
