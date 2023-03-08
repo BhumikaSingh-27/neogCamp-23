@@ -96,5 +96,18 @@
 // const checkKeyValue = (obj,key,value) => obj[key] === value 
 // const getOutput = (arr,key,value) => arr.find((obj)=>checkKeyValue(obj,key,value))
 
-// console.log(getOutput(arr,key,value));  
+// console.log(getOutput(arr,key,value)); 
+
+//----------------
+//write a function which removes all letters between first and last letter of a word and replace with number of letters
+// const input = "Every developer likes to mix kubernetes and javascript";
+// const getLength = (word) => word.length -2
+// const replace = word => word[0] + getLength(word) +word[word.length-1]
+
+// const replaceInt = str => str.map(replace)
+
+// console.log(replaceInt(input.split(" ")).join(" "))
+
+//--------------------
+
 
