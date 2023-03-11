@@ -60,9 +60,10 @@ const people = [
 ]
 // Your code here
 
-const oldestPersonName = people =>people.reduce((acc,cur)=> acc.age>cur.age?acc.name:cur.name)
+const oldestPersonName = people =>people.reduce(((acc,cur)=> acc.age>cur.age?acc:cur),people[0]).name
 console.log(oldestPersonName(people)); 
 // Output: 'Naina'
+
 
 
 // 8. Write an ES6 function that takes an array of objects representing people with properties name and age, and returns an object with the average age of all the people.
@@ -89,4 +90,19 @@ const products = [
   // { name: "Slipper", price: 40, quantity: 3 }
 
 
-//11. Write an ES6 function that takes an array of strings and returns an object with the count of each string.
+//10. Write an ES6 function that takes an array of strings and returns an object with the count of each string.
+const fruits = ['apple', 'banana', 'banana', 'cherry', 'apple', 'apple', 'banana'];
+// Your code here
+
+const countStrings = fruits => fruits.reduce((acc,cur)=>{
+  // console.log(acc)
+if(!acc[cur]){
+  acc[cur]= 1
+}else{
+  acc[cur]+=1
+}
+  return acc
+},{})
+
+console.log(countStrings(fruits));
+// Output: { 'apple': 3, 'banana': 3, 'cherry': 1 }
