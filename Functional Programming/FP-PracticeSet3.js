@@ -37,10 +37,7 @@ const products = [
     { name: "Smartwatch", price: 199, category: "electronics" },
   ];
   
-  // Your code here
-  
   const findElectronicsProduct = products => products.find(({category})=> category === 'electronics')
-
   const electronicsProduct = findElectronicsProduct(products);
   console.log(electronicsProduct); 
   // Output: { name: "iPad", price: 799, category: "electronics" }
@@ -130,8 +127,8 @@ const cars = [
     { make: "Ford", model: "Mustang", year: 2018 },
   ];
   
- const getCarModel = arrayOfCars =>arrayOfCars.filter(({year})=> year>2012).map(({model})=> model)
-  
+//  const getCarModel = arrayOfCars =>arrayOfCars.filter(({year})=> year>2012).map(({model})=> model)
+ const getModelNames = cars => cars.reduce(((acc,{model,year})=> year>2010?[...acc,model]: acc),[])
   const carModels = getCarModel(cars);
   console.log(carModels);
   // Output: ["Camry", "Mustang"]
