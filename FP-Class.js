@@ -233,3 +233,14 @@ console.log(getSumOfFacts(1,2,3)) // output: 9
 console.log(getSumOfFacts(1,2,3,4)) // output: 33
 
 //=====
+function fakeFetch(msg, shouldReject)
+ { return new Promise((resolve, reject) => 
+  { setTimeout(() => 
+    { if (shouldReject) { reject(`error from server: ${msg}`); 
+  } resolve(`from server: ${msg}`); 
+}, 3000); }); }
+
+
+fakeFetch("bumika",true)
+.then(data=>console.log(`the dats is ${data}`))
+.catch(console.error("error encountered"))

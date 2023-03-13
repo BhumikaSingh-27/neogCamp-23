@@ -79,7 +79,7 @@ console.log(isDivisibleBy7)
 
 const names = ["Mohan", "Anjali", "Geetanjali", "Ankit", "Bhanu Kumar", "Ramakrishnan",  "shayam"]
 
-const isNamesGreaterThan8 = names.filter((str) => str.length > =8)
+const isNamesGreaterThan8 = names.filter((str) => str.length >= 8)
 
 console.log(isNamesGreaterThan8(names));
 // Output: ["Geetanjali", "Bhanu Kumar", "Ramakrishnan"]

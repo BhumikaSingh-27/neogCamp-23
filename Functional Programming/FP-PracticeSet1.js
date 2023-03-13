@@ -32,35 +32,35 @@ const people = [
 
 
   //4. Write an ES6 function that takes an array of objects representing products and returns an array with the product names in all lower case letters using the map method.
-
-const getProductNames = product => product.name.toLowerCase()
-const getProductNamesInLowerCase = productDetails => productDetails.map(getProductNames)
-
-const products = [
+  const products = [
     { name: 'Lip Balm', stock: 100 },
     { name: 'PERFUME', stock: 400 },
     { name: 'Socks', stock: 200 }
   ];
+const getProductNames = product => product.name.toLowerCase()
+const getProductNamesInLowerCase = productDetails => productDetails.map(getProductNames)
+// const getProductNamesInLowerCase = product =>product.map(({name})=>name.toLowerCase())
+
   console.log(getProductNamesInLowerCase(products));
   // Output: ["lip balm", "perfume", "socks"]
 
 
 
 //5. Write an ES6 function that takes an array of objects representing cities and returns an array of their names using the map method.
+const cities = [
+  { name: 'New York', population: 8538000 },
+  { name: 'Los Angeles', population: 3976000 },
+  { name: 'Bangalore', population: 13608000 }
+];
 
 const cityNames = object => object.name
-const getCityNames = cityArray => cityArray.map(cityNames)
+// const getCityNames = cityArray => cityArray.map(cityNames)
+const getCityNames = city => city.map(({name})=> name)
+console.log(getCityNames(cities)); 
+// Output: ["New York", "Los Angeles", "Bangalore"]
 
-const cities = [
-    { name: 'New York', population: 8538000 },
-    { name: 'Los Angeles', population: 3976000 },
-    { name: 'Bangalore', population: 13608000 }
-  ];
-  
-  console.log(getCityNames(cities)); 
-  // Output: ["New York", "Los Angeles", "Bangalore"]
 
-  //6.Write an ES6 function that takes an array of strings and returns an array with only the strings that have a length greater than 5.
+//6.Write an ES6 function that takes an array of strings and returns an array with only the strings that have a length greater than 5.
   // Your ES6 function here
 const greaterThanFive = str => str.length > 5
 
@@ -81,17 +81,20 @@ console.log(isDivisibleBy3and5(numbers));
 
 
 //8.Write an ES6 function that takes an array of objects with the properties name and age, and returns an array with only the objects that have an age greater than 30.
-const checkAge = ({age}) => age>30
-
-const filterByAge = person=> person.filter(checkAge)
+// const checkAge = ({age}) => age>30
 
 const people = [
-    { name: 'Rahul', age: 25 },
-    { name: 'Raj', age: 35 },
-    { name: 'Vijay', age: 45 }
-  ];
-  
-  console.log(filterByAge(people));
+  { name: 'Rahul', age: 25 },
+  { name: 'Raj', age: 35 },
+  { name: 'Vijay', age: 45 }
+];
+
+// const filterByAge = person=> person.filter(checkAge)
+const filterByAge = person=> person.filter((obj)=>obj.age>30)
+// const filterByAge = person=> person.filter(({age})=> age>30)
+console.log(filterByAge(people));
+
+
 //9.Write an ES6 function that takes an array of objects with the properties name and score, and returns an array with only the objects that have a score greater than 80.
   // const checkScore = student =>student.score>80
 const checkScore = ({score}) =>score>80
@@ -110,9 +113,9 @@ console.log(filterByScore(students));
 //10. Write an ES6 function that takes an array of objects with the properties name, age and city, and returns an array with only the objects that have a city property of "Indore" and age greater than 70.
 // Your ES6 code here
 const checkConstraints = ({city,age})=> city==="Indore" && age>70
-
 const filterByCityAndAge = people => people.filter(checkConstraints)
 
+// const filterByCityAndAge = student => student.filter(({age,city})=>city ==="Indore" && age>70)
 
 const people = [
   { name: 'Ridhima', age: 75, city: 'Indore' },
@@ -126,8 +129,9 @@ console.log(filteredPeople);
 
 
 //11. Write an ES6 function that takes an array of objects containing book information (title, author, genre) and returns an array with only the books of "Science Fiction".
-const checkGenure = ({genre}) => genre === "Science Fiction"
-const filterByGenre = (books, genture) => books.filter(checkGenure)
+// const checkGenure = (obj,genre) => obj.genre === genre
+const filterByGenre = (books, genre) => books.filter((obj)=>obj.genre === genre)
+// const filterByGenre = (books,genreCheck)=> books.filter(({genre})=>genre===genreCheck)
 
 const books = [
     {title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"},
