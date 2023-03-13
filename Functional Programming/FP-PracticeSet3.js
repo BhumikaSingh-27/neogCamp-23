@@ -144,9 +144,8 @@ const cars = [
     { title: "The Name of the Wind", author: "Patrick Rothfuss", pageCount: 662 },
   ];
   
-  // Your code here
-  
-  const getTitlesWithMoreThan500Pages = userBooks => userBooks.filter(({pageCount})=> pageCount> 700).map(({title})=> title)
+  // const getTitlesWithMoreThan500Pages = userBooks => userBooks.filter(({pageCount})=> pageCount> 700).map(({title})=> title)
+  const getTitlesWithMoreThan700Pages = books => books.reduce(((acc,{title,pageCount})=> pageCount>700?[...acc,title]:acc),[])
   
   const booksWithMoreThan500Pages = getTitlesWithMoreThan500Pages(books);
   console.log(booksWithMoreThan500Pages); 
@@ -157,7 +156,7 @@ const cars = [
 
 const numbers = [12, 23, 4, 2, 11, 21] 
 // Your code here
-const sumOfEvenNumbers = numbers => numbers.reduce((acc,cur)=> cur%2===0 ? acc+cur : acc)
+const sumOfEvenNumbers = numbers => numbers.reduce(((acc,cur)=> cur%2===0 ? acc+cur : acc),0)
 console.log(sumOfEvenNumbers(numbers))
 // Output: 18
 
