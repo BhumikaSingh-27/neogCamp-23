@@ -190,15 +190,16 @@ const products = [
   ];
   
   // Your code here
-  const getTotalCost = products => products.reduce(((acc,cur)=> acc+cur.price*cur.quantity),0)
+  // const getTotalCost = products => products.reduce(((acc,cur)=> acc+cur.price*cur.quantity),0)
+  const getTotalCost = prod => prod.reduce((acc,{price,quantity})=>price*quantity+acc,0)
   console.log(getTotalCost(products)); 
   // Output: 150
 
 
-  //14. Write an ES6 function that takes an array of strings and 
+//14. Write an ES6 function that takes an array of strings and 
   //returns a single string that is the concatenation of all the strings using the reduce function.
   const strings = ['Hello', ' ', 'world', '!'];
-// Your code here
+
 const concatenateStrings = arrayOfStr => arrayOfStr.reduce(((concatStr, curStr)=>concatStr+curStr),'')
 
 console.log(concatenateStrings(strings)); 
@@ -208,10 +209,8 @@ console.log(concatenateStrings(strings));
 //15. Write an ES6 function that takes an array of numbers and returns the minimum number using the reduce function.
 
 const numbers = [10, 5, 8, 3, 6];
-
-// Your code here
-const getMinimumNumber = numbers => numbers.reduce((min,cur)=> min>cur? min=cur: min)
-
+const getMinimumNumber = numbers => numbers.reduce((min,cur)=> min>cur? cur: min)
+// const getMinimumNumber = number => number.reduce((acc,cur)=>acc>cur?cur:acc)
 
 console.log(getMinimumNumber(numbers)); 
 // Output: 3
