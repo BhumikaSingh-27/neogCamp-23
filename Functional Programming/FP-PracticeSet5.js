@@ -61,7 +61,49 @@ const products = [
   
 
   //q4
+  const employees = [
+    { name: "Abhay", department: "IT", salary: 20000 },
+    { name: "Joice", department: "CIS", salary: 35000 },
+    { name: "Reena", department: "EIS", salary: 15000 },
+    { name: "Jeena", department: "IT", salary: 50000 }
+  ];
+  
+  export default function employeeDetails() {
+    return (
+      <div>
+        <h1>Employee Details</h1>
+        <ul>
+          {employees.map(({ name, department, salary }) => (
+            <li>
+              {name} : {department} : {salary}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
   //q5
+  const recipes = [
+    { id: 1, name: "Paneer butter masala", creater: "Bhumika" },
+    { id: 2, name: "Paneer chilly", creater: "Savi" },
+    { id: 3, name: "Paneer roll", creater: "Shashank" },
+    { id: 4, name: "Paneer tikka", creater: "Astha" }
+  ];
+  
+  export default function recipeDetails() {
+    return (
+      <div>
+        <h1>Recipe Details</h1>
+        <ul>
+          {recipes.map(({ id, name, creater }) => (
+            <li key={id}>
+              {name} : {creater}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 //q6
 const cars = [
     { id:1 ,make: "Toyota", model: "Corolla",  price: 2010 },
