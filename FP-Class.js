@@ -265,3 +265,35 @@ const fancyArray = arr => arr.reduce((acc,cur,index)=>{
 } ,[])
 
 console.log(fancyArray(letterArray))
+
+
+//==================
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+a = "xyaabbbccccdefww"
+b = "xxxxyyyyabklmopq"
+
+const longest = (s1, s2) => (s1+s2).split("").reduce((acc,cur)=> !acc.includes(cur) ? [...acc,cur] : acc,[]).sort().join("")
+console.log(longest(a,b))
+
+// const longest = (s1, s2) =>{
+//   const concatStr = s1+s2
+//   const arr =[]
+//   for(let i=0;i<concatStr.length;i++){
+//     if(!arr.includes(concatStr[i])){
+//       arr.push(concatStr[i])
+//   }
+// }
+//   return (arr.sort().join(""))
+
+//   }
+  
+//   console.log(longest(a,b))
