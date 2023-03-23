@@ -2,9 +2,10 @@
 //You can practice this question in any JS editor or your browser console.
 
 const delayedLoop =(num)=> {
+    for(let i=1;i<=num;i++)
     setTimeout(()=>{
         console.log("Hello")
-    }, 1000)
+    }, i*1000 )
 }
 
 
