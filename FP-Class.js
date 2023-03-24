@@ -297,3 +297,27 @@ console.log(longest(a,b))
 //   }
   
 //   console.log(longest(a,b))
+
+
+// ============
+
+const calculateSum = array =>{
+  let sumOfInt=0
+  let sumOfStr = 0
+  for(let i of array){
+      if(typeof(i) === "number"){
+          // console.log(i)
+          sumOfInt += i
+      }else{
+          
+          //ssumOfStr += parseInt(i)
+          sumOfStr =+ Number(i)
+          // sumOfStr+= +i
+          // console.log(i)
+      }
+  }
+  console.log(sumOfInt-sumOfStr)
+}
+
+calculateSum([9, 3, '7', '3'])
+calculateSum(['5', '0', 9, 3, 2, 1, '9', 6, 7])
