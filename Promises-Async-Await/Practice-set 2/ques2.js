@@ -55,19 +55,31 @@ const fakeFetch = (url) => {
 // Output on the DOM should be:
 // Congratulation to the members of winning team Jhon, Raju, Anjali, Sakshi, great work keep it up.
 
+// const asyncFunction = async () => {
+//   try {
+//     let response = await fakeFetch("https://example.com/winner-team");
+//     const names = response.data.data;
+//     let tag = "";
+//     for (let i = 0; i < names.length; i++) {
+//       if (i === names.length - 1) {
+//         tag = tag + "and " + names[i];
+//       } else {
+//         tag = tag + names[i] + ", ";
+//       }
+//     }
+//     showOutput.innerText = `Congratulation to the members of winning team ${tag} great work keep it up`;
+//   } catch (error) {
+//     showOutput.innerText = "error occured!";
+//   }
+// };
 const asyncFunction = async () => {
   try {
     let response = await fakeFetch("https://example.com/winner-team");
     const names = response.data.data;
-    let tag = "";
-    for (let i = 0; i < names.length; i++) {
-      if (i === names.length - 1) {
-        tag = tag + "and " + names[i];
-      } else {
-        tag = tag + names[i] + ", ";
-      }
-    }
-    showOutput.innerText = `Congratulation to the members of winning team ${tag} great work keep it up`;
+    let listOfNames = names.join(",");
+    showOutput.innerText = `Congratulation to the members of winning team ${listOfNames} great work keep it up`;
+    showOutput.innerText = `Congratulation to the members of winning team ${names} great work keep it up`;
+
   } catch (error) {
     showOutput.innerText = "error occured!";
   }
