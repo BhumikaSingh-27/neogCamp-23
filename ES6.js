@@ -35,3 +35,49 @@
 // console.log(a,c)
 
 //
+
+// console.log(a);
+// console.log(b);
+// function sum (){
+// var a =10;
+// let b =20;
+// return a+b
+// }
+
+// function sum(a){
+//     let b = getNumber();
+//     console.log(a+b);
+//     }
+//     sum(10);
+//     var getNumber = () => {
+//     return 20;
+//     }
+
+// function sum(a){
+//     let b = getNumber();
+//     console.log(a+b);
+//     }
+//     sum(10);
+//     const getNumber = () => {
+//     return 20;
+//     }
+
+// const checkACharacter = (msg, char) => {
+//   for (let i of msg) {
+//     if (i.toLowerCase() === char || i.toUpperCase() === char) {
+//       return "contains";
+//     }
+//   }
+//   return "doesn't contain";
+// };
+// console.log(checkACharacter("nitin", "b"));
+
+function sum() { 
+    const sum = a+b; 
+    console.log(sum)
+    }
+    
+    const a = 1;
+    const b = 2;
+    
+    sum();
