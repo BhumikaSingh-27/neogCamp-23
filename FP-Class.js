@@ -321,12 +321,6 @@
 
 // calculateSum([9, 3, '7', '3'])
 // calculateSum(['5', '0', 9, 3, 2, 1, '9', 6, 7])
-let a = 1;
-let b = 2;
 
-[a,b] =[b,a]
 
-// const swap = (a, b) => [a, b] = [b, a]
-
-console.log(a) // 2
-console.log(b) // 1
+//
