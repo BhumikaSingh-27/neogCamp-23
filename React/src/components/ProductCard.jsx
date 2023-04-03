@@ -1,8 +1,8 @@
 export const ProductCard = ({name, price})=>{
     return (
         <div>
-            <h1>Product details</h1>
-            <p>Price</p>
+            <h3>Product details</h3>
+            <p>Name: {name} Price:{price}</p>
         </div>
     )
 }

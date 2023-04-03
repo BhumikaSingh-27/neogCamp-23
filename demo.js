@@ -137,3 +137,9 @@
 // console.log(validatePIN('1.3234'))
 
 
+const delayedLoop = (msg)=>{
+    for(let i=1;i<=3;i++){
+      setTimeout(()=> console.log(msg),i*1000)
+    }
+  }
+  delayedLoop("bhumika")
