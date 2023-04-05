@@ -1,6 +1,6 @@
 export const ColorPicker = ({color})=>{
 
-    const onClick =(data)=>{
+    const clickHandler =(data)=>{
         const val =data.target.innerHTML ;
         console.log(val)
     }

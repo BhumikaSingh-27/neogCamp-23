@@ -4,6 +4,7 @@ import { Greeting } from "./Greeting"
 import { ProductCard } from "./components/ProductCard"
 import { ToDo } from "./components/ToDo"
 import { ColorPicker } from './components/ColorPicker'
+import { BouquetPrice } from './components/BouquetPrice'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -46,16 +47,34 @@ function App() {
     green : '#7FFFD4'
   }
 
+  const bouquet = [
+    {
+      id: 1,
+      flowers: ['rose', 'lily', 'marigold'],
+      totalFlowers: 9,
+      price: 1400,
+    },
+    {
+      id: 2,
+      flowers: ['snapdragon', 'sunflower'],
+      totalFlowers: 10,
+      price: 3400,
+    },
+  ]
+
   return (
     <div className="App">
       <div>
       <h1>Greetings!</h1>
       <Greeting name="Bhumika" />
+
       <ProductCard name={"Pen"} price={"10"}/>
       <hr />
       <ToDo items={todoItems} />
       <hr />
-      <ColorPicker color={colors} />
+      <ColorPicker color={colors} /> <hr />
+      <h1>Set 3 ques-6</h1>
+      <BouquetPrice bouquet={bouquet}/>
       </div>
     </div>
   )
