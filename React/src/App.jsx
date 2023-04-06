@@ -5,6 +5,7 @@ import { ProductCard } from "./components/ProductCard"
 import { ToDo } from "./components/ToDo"
 import { ColorPicker } from './components/ColorPicker'
 import { BouquetPrice } from './components/BouquetPrice'
+import { ShowCategory } from "./components/ShowCategory"
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -61,6 +62,32 @@ function App() {
       price: 3400,
     },
   ]
+  const cars = [
+    {
+      id: 1,
+      name: 'supra',
+      price: 500000,
+      category: 'sports',
+    },
+    {
+      id: 2,
+      name: 'A5',
+      price: 700000,
+      category: 'luxury',
+    },
+    {
+      id: 3,
+      name: 'huyara',
+      price: 1500000,
+      category: 'sports',
+    },
+    {
+      id: 4,
+      name: 'agera R',
+      price: 3500000,
+      category: 'sports',
+    },
+  ]
 
   return (
     <div className="App">
@@ -74,7 +101,8 @@ function App() {
       <hr />
       <ColorPicker color={colors} /> <hr />
       <h1>Set 3 ques-6</h1>
-      <BouquetPrice bouquet={bouquet}/>
+      <BouquetPrice bouquet={bouquet}/> <hr />
+      <ShowCategory cars={cars} />
       </div>
     </div>
   )
