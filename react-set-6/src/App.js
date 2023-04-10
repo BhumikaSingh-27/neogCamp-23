@@ -5,6 +5,9 @@ import { Ques3 } from "./component/Ques3";
 import { Ques4 } from "./component/Ques4";
 import { Ques5 } from "./component/Ques5";
 import { Ques6 } from "./component/Ques6";
+import { Ques7 } from "./component/Ques7";
+import { Ques8 } from "./component/Ques8";
+import { Ques9 } from "./component/Ques9";
 
 function App() {
   return (
@@ -22,6 +25,14 @@ function App() {
       <Ques5 /> <hr />
       <h2>Ques6</h2>
       <Ques6 />
+      <hr />
+      <h2>Ques7</h2>
+      <Ques7 /> <hr />
+      <h2>Ques8</h2>
+      <Ques8 />
+      <hr />
+      <h2>Ques9</h2>
+      <Ques9 />
     </div>
   );
 }

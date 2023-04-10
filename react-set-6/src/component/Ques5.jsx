@@ -8,11 +8,11 @@ export const Ques5 = () => {
     const getData = async(url) => {
         try {
             const {status, data} = await fakeFetch(url)
-            console.log(status,data)
+            // console.log(status,data)
             if (status === 200){
                 setBakeryData(data.posts)
             }
-            console.log(data)
+            // console.log(data)
         }catch(e){
             console.log(e)
         }
@@ -28,7 +28,7 @@ export const Ques5 = () => {
 
     return (
         <>
-        <ul>
+        <ul style={{backGroundColor: "red"}}>
             {
                 bakeryData.map(({caption,src,views,likes,category},index)=>(<li key={index}><img src={src} alt="" /><figcaption>{caption}</figcaption><p>Likes:{likes}<br />Views:{views}</p></li>))
 
