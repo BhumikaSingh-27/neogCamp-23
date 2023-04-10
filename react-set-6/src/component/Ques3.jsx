@@ -7,12 +7,11 @@ export const Ques3 = () => {
 const getData = async(url) => {
     try{
         const {status, data} = await fakeFetch(url)
-        console.log(status)
         if(status === 200)
         {
             setData(data.habits)
         }
-        console.log(status,data)
+        
     }catch(e){
         console.log(e)
     }
