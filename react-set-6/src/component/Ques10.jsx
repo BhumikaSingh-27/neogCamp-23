@@ -4,6 +4,7 @@ import { fakeFetch } from "../api/api10"
 export const Ques10 = () => {
     const [ userData, setUserData ] = useState([])
     const [ followerCount, setFollowerCount ] = useState(0)
+    const [ disable , setDisable ] = useState(false)
 
     const getData = async(url) => {
         try {
@@ -21,6 +22,7 @@ export const Ques10 = () => {
 
     const updateFollower = () =>{
         setFollowerCount(count => count+1)
+        setDisable(true)
     }
 
     useEffect(()=>{
@@ -41,7 +43,7 @@ export const Ques10 = () => {
             followers: {userData.followers + followerCount} <br />
             followedBy: {userData.followedBy} <br />
         </p>
-    <button onClick={updateFollower}>Follow {userData.name}</button>
+    <button disabled={disable} onClick={updateFollower}>Follow {userData.name}</button>
     </>
 
 }
