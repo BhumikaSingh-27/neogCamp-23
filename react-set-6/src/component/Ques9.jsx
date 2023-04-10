@@ -11,7 +11,7 @@ export const Ques9 = () => {
             
             if(status === 200){
                 setVideoData(data.videos)
-                console.log(data)
+                // console.log(data)
             }
             
         }catch (e) {

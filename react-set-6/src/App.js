@@ -8,6 +8,7 @@ import { Ques6 } from "./component/Ques6";
 import { Ques7 } from "./component/Ques7";
 import { Ques8 } from "./component/Ques8";
 import { Ques9 } from "./component/Ques9";
+import { Ques10 } from "./component/Ques10";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
       <Ques8 />
       <hr />
       <h2>Ques9</h2>
-      <Ques9 />
+      <Ques9 /><hr />
+      <h2>Ques10</h2>
+      <Ques10 />
     </div>
   );
 }
