@@ -3,28 +3,17 @@ import { fakeFetch } from "../api/api9";
 
 export const Ques10 = () => {
   const [productData, setProductData] = useState([]);
-  const [filArr, setFAilArr] = useState([]);
+  const [searchStr, setSearchStr] = useState("");
 
   const getData = async (url) => {
     try {
       const { status, data } = await fakeFetch(url);
       if (status === 200) {
         setProductData(data.products);
-        // setFAilArr(data.products);
       }
     } catch (e) {
       console.log(e);
     }
-  };
-
-  const filterProducts = (event) => {
-    const input = event.target.value;
-
-    const arr = productData.filter((item) =>
-      item.name.toLowerCase().includes(input.toLowerCase())
-    );
-    setFAilArr(arr);
-    // console.log(arr);
   };
 
   useEffect(() => {
@@ -33,7 +22,47 @@ export const Ques10 = () => {
 
   return (
     <div>
-      {productData.length === 0 ? (
+      <input
+        type="text"
+        onChange={(event) => setSearchStr(event.target.value)}
+      />
+      {productData.length === 0 && <p>Data is loading...</p>}
+
+      {searchStr.length === 0 &&
+        productData.map((item, index) => (
+          <li key={index}>
+            {item.name}
+            <br />${item.price}
+            <br />
+            {item.quantity}
+          </li>
+        ))}
+
+      {searchStr.length > 0 &&
+        (productData.filter(({ name }) =>
+          name.toLowerCase().includes(searchStr.toLowerCase())
+        ).length === 0 ? (
+          <p>Item not found...</p>
+        ) : (
+          (productData
+            .filter((product) =>
+              product.name.toLowerCase().includes(searchStr.toLowerCase())
+            ))
+            .map((item, index) => (
+              <li key={index}>
+                {item.name}
+                <br />${item.price}
+                <br />
+                {item.quantity}
+              </li>
+            ))
+        ))}
+
+      {/* {
+        searchStr.
+      } */}
+
+      {/* {productData.length === 0 ? (
         <h2 style={{ color: "burlywood" }}>
           We are almost there with the products...
         </h2>
@@ -42,16 +71,20 @@ export const Ques10 = () => {
           <h1>Products</h1>
           <label> Enter Product details:</label>{" "}
           <input type="text" onChange={filterProducts} />
-          {filArr.map((item, index) => (
-            <li>
-              {item.name}
-              <br />${item.price}
-              <br />
-              {item.quantity}
-            </li>
-          ))}
+          {filArr.length > 0 ? (
+            filArr.map((item, index) => (
+              <li key={index}>
+                {item.name}
+                <br />${item.price}
+                <br />
+                {item.quantity}
+              </li>
+            ))
+          ) : (
+            <p>Item not found</p>
+          )}
         </>
-      )}
+      )} */}
     </div>
   );
 };
