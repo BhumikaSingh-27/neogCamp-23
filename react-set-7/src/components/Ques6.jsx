@@ -40,14 +40,16 @@ export const Ques6 = () => {
               (acc, cur) => (acc.includes(cur) ? [...acc] : [...acc, cur]),
               []
             )
-            .map((genre) => (
-              <option value={genre}>{genre}</option>
+            .map((genre, index) => (
+              <option key={index} value={genre}>
+                {genre}
+              </option>
             ))}
         </select>
       </p>
-      <ul style={{listStyle: "inherit"}}>
-        {filArr.map(({ title, year, genre }) => (
-          <li>
+      <ul style={{ listStyle: "inherit" }}>
+        {filArr.map(({ title, year, genre }, index) => (
+          <li key={index}>
             <p>{title}</p>
             <p>{year}</p>
             <p>{genre}</p>

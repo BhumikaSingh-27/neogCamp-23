@@ -26,8 +26,8 @@ export const Ques5 = () => {
         </p>
       ) : (
         <>
-          {quoteData.map(({ content, author }) => (
-            <p>
+          {quoteData.map(({ content, author }, index) => (
+            <p key={index}>
               "{content}"<br /> -{author}
             </p>
           ))}
