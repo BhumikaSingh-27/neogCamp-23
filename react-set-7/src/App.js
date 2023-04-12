@@ -4,6 +4,8 @@ import { Ques2 } from "./components/Ques2";
 import { Ques3 } from "./components/Ques3";
 import { Ques4 } from "./components/Ques4";
 import { Ques5 } from "./components/Ques5";
+import { Ques6 } from "./components/Ques6";
+import { Ques7 } from "./components/Ques7";
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
       <Ques4 /> <hr />
       <h2>Ques5</h2>
       <Ques5 /> <hr />
+      <h2>Ques6</h2>
+      <Ques6 /> <hr />
+      <h2>Ques7</h2>
+      <Ques7 /> <hr />
     </div>
   );
 }

@@ -47,14 +47,16 @@ export const Ques4 = () => {
                 ))}
             </select>
           </p>
-          {filArr.map(({ name, email, website, company }, index) => (
-            <li key={index}>
-              <p>{name}</p>
-              <p>{email}</p>
-              <p>{website}</p>
-              <p>{company}</p>
-            </li>
-          ))}
+          <ul style={{ listStyle: "outside" }}>
+            {filArr.map(({ name, email, website, company }, index) => (
+              <li key={index}>
+                <p>{name}</p>
+                <p>{email}</p>
+                <p>{website}</p>
+                <p>{company}</p>
+              </li>
+            ))}
+          </ul>
         </>
       )}
     </>

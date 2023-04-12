@@ -11,7 +11,6 @@ export const Ques3 = () => {
       if (response.status === 200) {
         setMoviedata(response.data);
       }
-      console.log(moviedata);
     } catch (e) {
       console.log(e);
     }
@@ -45,7 +44,7 @@ export const Ques3 = () => {
           </select>
           <ul>
             {filArr.map(({ title, year, ratings }) => (
-              <li >
+              <li>
                 <p>Name: {title}</p>
                 <p>Year:{year}</p>
                 <p>Ratings: {ratings}</p>
