@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333333;
+}
+
+p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+ul {
+
+    list-style: none;
+}
+
+li {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    color: #333333;
+}
+
+.list li {
+    font-size: 18px;
+    font-weight: 800;
+    padding: 15px;
+    border: 5px dashed red;
+    text-align: center;
+    margin: 5px
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 18px;
+    margin: 18px;
+}
+
+button {
+    background-color: #333333;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 18px;
+    color: #ffffff;
+}
+
+div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+
+img {
+    margin: 10px;
+}
+
+figcaption {
+    font-size: 24px;
+    color: #333333;
+    margin: 10px;
+}
+
+div p {
+    font-size: 18px;
+    color: #666666;
+    margin: 10px;
+}
+
+.ques6 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 20px;
+
+}
+
+.ques6 button {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#ques7{
+    width: 400px;
+    height:40px;
+    border: 1px solid #cccccc;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 20px 0px 20px;
+    font-family: 'Open Sans';
+    font-weight: 400px;
+}
