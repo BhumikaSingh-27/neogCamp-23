@@ -3,12 +3,14 @@ import { TodoContext } from "../context/TodoContext";
 import { Link } from "react-router-dom";
 
 export const OpenTodoList = () => {
-  const { data } = useContext(TodoContext);
-  const count = data.filter(({ isCompleted }) => !isCompleted);
+  const { data, obj } = useContext(TodoContext);
+  const { openCount } = obj;
+
+  //   const count = data.filter(({ isCompleted }) => !isCompleted);
   return (
     <>
       <h1>Open Todo</h1>
-      <h2>Total Todo: {count.length}</h2>
+      <h2>Total Todo: {openCount.length}</h2>
       <ul>
         {data
           .filter(({ isCompleted }) => !isCompleted)

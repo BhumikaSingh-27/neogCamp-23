@@ -6,6 +6,11 @@ export const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [data, setData] = useState([]);
+
+  const openCount = data.filter(({ isCompleted }) => !isCompleted);
+  const doneCount = data.filter(({ isCompleted }) => isCompleted);
+
+  const obj = { data, openCount ,doneCount}
  
 
   const getData = async (url) => {
@@ -31,7 +36,7 @@ export const TodoProvider = ({ children }) => {
   }
 
   return (
-    <TodoContext.Provider value={{ data, markAsDone }}>
+    <TodoContext.Provider value={{ data, markAsDone, obj }}>
       {children}
     </TodoContext.Provider>
   );
