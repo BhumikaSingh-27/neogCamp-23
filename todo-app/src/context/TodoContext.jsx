@@ -6,10 +6,7 @@ export const TodoContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [data, setData] = useState([]);
-  const [checkStatus, setCheckStatus] = useState({
-    isDone: false,
-    text: "Mark as Done",
-  });
+ 
 
   const getData = async (url) => {
     try {
@@ -31,15 +28,10 @@ export const TodoProvider = ({ children }) => {
         item.id === todoid ? { ...item, isCompleted: !item.isCompleted } : item
       )
     );
-    setCheckStatus((checkStatus) => ({
-      ...checkStatus,
-      isDone: true,
-      text: checkStatus.isDone ? "Mark us Undone" : "Mark as done",
-    }));
-  };
+  }
 
   return (
-    <TodoContext.Provider value={{ data, markAsDone, checkStatus }}>
+    <TodoContext.Provider value={{ data, markAsDone }}>
       {children}
     </TodoContext.Provider>
   );

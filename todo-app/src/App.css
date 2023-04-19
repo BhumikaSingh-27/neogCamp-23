@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   margin: 2rem;
+  font-family: sans-serif;
 }
 
 
@@ -34,6 +35,36 @@ ul {
   text-align: left;
 }
 
-NavLink:hover {
-  background-color: "pink";
+li {
+  border-radius: 0.5rem;
+  border: 2px dashed rebeccapurple;
+  padding: 1rem;
+  display: inline-block;
+  margin: 1rem;
+  background-color: bisque;
+}
+
+button {
+  background-color: mediumvioletred;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: small;
+  font-family: sans-serif;
+}
+
+button:hover {
+  font-size: large;
+  background-color: mediumpurple;
+}
+
+.todo-desc {
+  background-color: bisque;
+  display: inline-block;
+  padding: 1rem;
+}
+
+Link:hover {
+  font-size: large;
+  background-color: mediumpurple;
 }

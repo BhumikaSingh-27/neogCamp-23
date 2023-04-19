@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
 
 export const Summary = () => {
-  const { data, markAsDone, checkStatus } = useContext(TodoContext);
+  const { data, markAsDone } = useContext(TodoContext);
   console.log(data);
   return (
     <>
@@ -12,15 +12,16 @@ export const Summary = () => {
           <li
             key={id}
             style={{
-              textDecoration:
-                checkStatus.isDone && isCompleted ? "line-through" : "",
+              textDecoration: isCompleted ? "line-through" : "",
             }}
           >
             <h3>{title}</h3>
             <p>{description}</p>
             {/* <p>Status: {isCompleted ? <>Done</> : <>Not Done</>}</p> */}
             <p>
-              <button onClick={() => markAsDone(id)}>{checkStatus.text}</button>
+              <button onClick={() => markAsDone(id)}>
+                {isCompleted ? "Mark as undone" : "Mark as Done"}
+              </button>
             </p>
           </li>
         ))}

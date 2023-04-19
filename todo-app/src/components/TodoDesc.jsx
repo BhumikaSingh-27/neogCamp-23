@@ -14,7 +14,7 @@ export const TodoDesc = () => {
       {todoInfo?.length === 0 ? (
         <>DataLoading...</>
       ) : (
-        <ul>
+        <ul className="todo-desc">
           {
             <>
               <h2>Title: {todoInfo?.title}</h2>
