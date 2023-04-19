@@ -2,22 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import { eCommerce, ECommerceProvider } from "./context/eCommerce";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { TodoContext, TodoProvider } from "./context/TodoContext";
 
+export { TodoContext };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-export {eCommerce}
-
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ECommerceProvider>
+      <TodoProvider>
         <App />
-      </ECommerceProvider>
+      </TodoProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

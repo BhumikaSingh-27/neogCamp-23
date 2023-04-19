@@ -370,44 +370,128 @@
 
 //===========================================
 
-const sumOfEvenNumbers = (arr)=>{
-    return (arr.reduce((acc,cur)=>{
-        // console.log(acc)
-        if(cur%2 ===0){
-        acc+=cur
-        return acc
-    }
-    console.log(acc)
-    return acc
-},0)) ?? 0
-}
+// const sumOfEvenNumbers = (arr)=>{
+//     return (arr.reduce((acc,cur)=>{
+//         // console.log(acc)
+//         if(cur%2 ===0){
+// //         acc+=cur
+// //         return acc
+// //     }
+// //     console.log(acc)
+// //     return acc
+// // },0)) ?? 0
+// // }
+// // // return (arr.reduce((acc,cur) => cur % 2 === 0 ? acc+=cur : acc,0)) ?? 0
 
-// console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6])) // 12
-console.log(sumOfEvenNumbers([])) // 0       
+// // // console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6])) // 12
+// // console.log(sumOfEvenNumbers([])) // 0       
+
+// //===================
+// // your ES6+ code here
+
+// const neogCommunity = [
+//     { name: 'Raju', role: 'student', hours: [1, 2, 3, 1, 2, 3, 0] },
+//     { name: 'Aakash', role: 'mentor', hours: [1, 2, 3, 4, 5, 6, 7] },
+//     { name: 'Ramesh', role: 'student', hours: [4, 5, 6, 4, 5, 6, 0] },
+//     { name: 'Jiten', role: 'TA', hours: [2, 2, 3, 5, 2, 3, 0] },
+//     { name: 'Harsh', role: 'student', hours: [7, 8, 9, 7, 8, 9, 0] },
+//     { name: 'Akshay', role: 'student', hours: [1, 3, 5, 7, 9, 0, 2] },
+//     { name: 'Rohan', role: 'mentor', hours: [1, 2, 3, 12, 2, 3, 0] },
+//     { name: 'Mohan', role: 'student', hours: [4, 6, 8, 0, 1, 9, 2] },
+//   ]
+
+//   const tagRegularStudents = (arr) => {
+//     // Your ES6+ code here
+  
+//     return arr.map((element) => {
+//       if (element.role === "student") {
+//         const totalActiveHours = element.hours.reduce((acc, cur) => acc + cur);
+//         if (totalActiveHours > 20) {
+//           return { ...element, tag: "regular" };
+//         }
+//       }
+//       return element;
+//     });
+//   };
+  
+//   console.log(tagRegularStudents(neogCommunity))
+//   // Output: [
+//   //   { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
+//   //   { name: "Aakash", role: "mentor", hours: [1, 2, 3, 4, 5, 6, 7] },
+//   //   { name: "Ramesh", role: "student", hours: [4, 5, 6, 4, 5, 6, 0], tag: "regular" },
+//   //   { name: "Jiten", role: "TA", hours: [2, 2, 3, 5, 2, 3, 0] },
+//   //   { name: "Harsh", role: "student", hours: [7, 8, 9, 7, 8, 9, 0] tag: "regular" },
+//   //   { name: "Akshay", role: "student", hours: [1, 3, 5, 7, 9, 0, 2] tag: "regular" },
+//   //   { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
+//   //   { name: "Mohan", role: "student", hours: [4, 6, 8, 0, 1, 9, 2] tag: "regular" }
+//   //
+// const sumOfEvenNumbers = (arr) => {
+//     return arr.reduce((acc, cur) => {
+//         const val = (cur ?? 0)
+//         console.log(val)
+//       if ( val % 2 !== 0) {
+//         return acc;
+//       }
+//       acc += cur;
+//       return acc;
+//     }, 0);
+//   };
+// //   console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6])); // 12
+// //   console.log(sumOfEvenNumbers([1, 3, 5]));
+//   console.log(sumOfEvenNumbers([undefined, 1, 2, 3, 4, undefined, 6]))
+
+
+// ============
+// your ES6+ code here
+
+const employees = [
+    { name: 'Raju', salary: 154, role: 'dev' },
+    { name: 'Aakash', salary: 200, role: 'dev' },
+    { name: 'Ramesh', salary: 3077, role: 'pm' },
+    { name: 'Jiten', salary: 487, role: 'qa' },
+  ]
+  
+  const filterBySalary = arr => arr.reduce((acc,cur)=> {
+    if(cur.salary % 2 === 0){
+        return [...acc,cur.name]
+    }
+    return acc
+  },[])
+  console.log(filterBySalary(employees)) // Output: ["Raju", "Aakash"]
             
             
             
+// Your ES6+ code here
+
+// const products = [
+//     { name: 'Bread', price: 150, quantity: 20 },
+//     { name: 'Hoodie', price: 200, quantity: 50 },
+//     { name: 'Pyjama', price: 307, quantity: 10 },
+//     { name: 'Slipper', price: 480, quantity: 30 },
+//   ]
+
+//   const filterProducts = arr => arr.reduce((acc,cur)=> {
+//     if(cur.quantity>10 && cur.name.length > 5){
+//         return [...acc, cur.name]
+//     }
+//     return acc
+//   },[])
+  
+//   console.log(filterProducts(products)) // Output: ["Hoodie", "Slipper"]
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+  // Your ES6+ code here
+
+const products = [
+    { name: 'Bread', price: 480, quantity: 3 },
+    { name: 'Clips', price: 200, quantity: 5 },
+    { name: 'green Bread Knife', price: 3077, quantity: 1 },
+    { name: 'Slipper', price: 150, quantity: 2 },
+  ]
+  
+  const filterByKeyword = arr => arr.reduce((acc,cur)=> cur.name.toLowerCase().includes("bread") ? [...acc,cur.name] : acc,[])
+  console.log(filterByKeyword(products))
+  // Output: ["Bread", "green Bread Knife"]
             
             
             
