@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics CSS-I</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Session One - examples</h1>
+    <h2>Pseudo Elements</h2>
+    <p>This is a Paragraph... we shall see examples to pseudo elements! The ::first-line pseudo-element is used to add a
+        special style to the first line of a text.
+
+        The following example formats the first line of the text in all elements:</p>
+
+    <p>Marker pseudo Class</p>
+    <ul>
+        <li>Peaches</li>
+        <li>Apples</li>
+        <li>Plums</li>
+    </ul>
+
+    <h1>Specificity</h1>
+    <h3>Inline style</h3>
+    <div style="color:blue">Source order comes later, first specificity is calculation is important! source order
+        doesn't matter, the styles which has highest specificity value. </div>
+    <p id="unique"> This is unique paragraphh. I might have to make this paragraph long to see the changes in style. Ok,
+        i will do that for you to understand!! :]</p>
+    <p class="special"> This is Paragraph will be styled by class selector.</p>
+
+    <div>This is a div element.</div>
+    <div id="div">This is a div element.</div>
+    <div class="class">This is a div element.</div>
+    <div class="class" id="unique">This is a div element.</div>
+</body>
+
+</html>

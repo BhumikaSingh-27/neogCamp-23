@@ -1,0 +1,68 @@
+body {
+    padding: 24px;
+    font-family: sans-serif;
+}
+
+* {
+background-color: aliceblue;
+color:cornflowerblue;
+}
+
+p {
+    color: red
+}
+
+p::before {
+    content: "<<<";
+    color: blue
+}
+
+p::after {
+    content: ">>>";
+    color: black;
+}
+
+p::first-letter {
+    color: cadetblue;
+    font-size: 70px;
+}
+
+p::selection {
+    color: blueviolet;
+    background-color: bisque;
+}
+
+
+
+p::first-line {
+    color: yellowgreen;
+}
+
+ul li::marker {
+
+    color: red
+}
+
+#unique {
+    color: darkslategray;
+    font-size: 40px;
+}
+
+div {
+    color: green;
+}
+
+#div {
+    color: aqua;
+}
+
+div.class {
+    color: brown;
+}
+/* (0,0,1,1) */
+
+div.class#unique {
+    color: pink;
+    /* font-size: 10px; */
+}
+/* (0,1,1,1) */
