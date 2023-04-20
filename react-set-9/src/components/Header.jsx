@@ -5,7 +5,7 @@ export const Header = () => {
     <div className="header">
       <h1>My Mail Box</h1>
       <nav>
-        <ul>
+        <ul className="flex">
           <li>
             <NavLink to="/inbox">Inbox</NavLink>
           </li>
