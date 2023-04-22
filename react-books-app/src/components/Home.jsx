@@ -4,11 +4,11 @@ import { FavContext } from "../Context/FavContext";
 
 export const Home = () => {
   const { bookData, markAsRead } = useContext(BookContext);
-  const { addBookToFav, labelFav } = useContext(FavContext);
+  const { addBookToFav } = useContext(FavContext);
 
   return (
     <>
-      {bookData.map(({ id, title, author, image, read,label}) => (
+      {bookData.map(({ id, title, author, image, read, label }) => (
         <div className="book" key={id}>
           <img src={image} alt={title} width="200px" /> <p>{id}</p>{" "}
           <p>Title:{title}</p>
