@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route to="/" element={<Home />}></Route>
-        <Route to="/profile" element={<Profile />}></Route>
-        <Route to="/favorites" element={<Favorites />}></Route>
-        <Route to="/readPage" element={<ReadPage />}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
+        <Route path="/readPage" element={<ReadPage />}></Route>
       </Routes>
     </div>
   );

@@ -43,7 +43,7 @@ nav {
   background-color: cornflowerblue;
   box-sizing: border-box;
   padding: 2rem;
-  
+
 }
 
 .navlink {
@@ -53,6 +53,13 @@ nav {
   /* display: inline; */
 }
 
-.navlink:hover{
-  color:yellow
+.navlink:hover {
+  color: yellow
+}
+
+
+.book {
+  border: 2px solid black;
+  display: inline-block;
+  margin: 2px;
 }
