@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin-left: 24px;
+  ;
 }
 
 .App-logo {
@@ -32,7 +34,46 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  font-family: sans-serif;
+  font-size: larger;
+  font-weight: 700;
+}
+
+button:hover {
+  color: lightcoral;
+}
+
+nav {
+  padding: 2rem;
+  margin: 5px;
+}
+
+.navlink {
+  padding: 1rem
+}
+
+header {
+  text-align: left;
+  margin-bottom: 50px;
+
+}
+
+.list-food-items {
+  border: 2px solid black;
+  display: inline-block;
+  width: 200px;
+  height: 500px;
+  padding: 1rem;
+  margin-right: 20px;
+}
+
+button#inCart {
+  display: inline;
 }
