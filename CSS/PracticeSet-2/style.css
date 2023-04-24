@@ -1,10 +1,26 @@
-.img-div {
-    border: 2px solid black;
+div#img-div{
+    /* border: 2px solid black; */
     background-image: url("https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_1280.jpg");
-    height: 400px;
-    width: 500px;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    height: 200px;
+    width: 400px;
+    box-sizing: content-box;
+    position: relative;
+    filter:blur(10px);
+    margin-bottom: -20px;
+       
+
+}
+
+/* img{
+    filter: blur(10px);
+} */
+div#context {
+    position: relative;
+    bottom:200px;
+    height:300px;
+    margin-top:-40px;
+     
+    
 }
 
 /* img {
@@ -13,3 +29,23 @@
     width: 500px;
 
 } */
+
+.Ques2{
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 2px 0.5px grey;
+}
+.text{
+    width:max-content;
+    margin:auto;
+    /* box-sizing: border-box; */
+}
+
+div p {
+    font-size: 30px;
+    width: max-content;
+    margin:auto;
+    padding:3rem;
+}
