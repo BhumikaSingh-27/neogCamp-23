@@ -1,38 +1,36 @@
-import { useState, useEffect } from "react";
 import { fakeFetch } from "../api/api5";
+import { useEffect, useState } from "react";
 
 export const Ques5 = () => {
-  const [quoteData, setQuoteData] = useState([]);
+  const [quote, setQuote] = useState({});
+  const [isLoading, setisLoading] = useState(false);
 
-  const getData = async () => {
+  const getNewQuote = async () => {
+    setisLoading(true);
     try {
       const response = await fakeFetch();
-      console.log(response);
-      setQuoteData([response]);
+      setQuote(response);
+      setisLoading(false);
     } catch (e) {
       console.log(e);
     }
   };
 
   useEffect(() => {
-    getData();
+    getNewQuote();
   }, []);
-
   return (
-    <div>
-      {quoteData.length === 0 ? (
-        <p style={{ fontWeight: "bold", fontSize: "2rem" }}>
-          Loading quotes, Hold on!!
-        </p>
+    <>
+      <h1>Let's get some new Quotes</h1>
+      {isLoading ? (
+        <h1> Hold on, Loading quotes</h1>
       ) : (
         <>
-          {quoteData.map(({ content, author }, index) => (
-            <p key={index}>
-              "{content}"<br /> -{author}
-            </p>
-          ))}
+          <p>"{quote?.content}"</p>
+          <p>-{quote?.author}</p>
+          <button onClick={getNewQuote}> New Quote </button>
         </>
       )}
-    </div>
+    </>
   );
 };
