@@ -6,7 +6,7 @@ export const Cart = () => {
 
   const price = cartData.reduce((tot, cur) => cur.price + tot, 0);
   const totalPrice = isCouponApplied ? price - 5 : price;
-  console.log("inside cart", cartData);
+
   let TotalDeliveryTime = cartData.reduce(
     (tot, cur) => cur.delivery_time + tot,
     0
@@ -22,8 +22,9 @@ export const Cart = () => {
         onClick={() => setTotalPrice((totalPrice) => totalPrice - 5)}
       > */}
       <button id="inCart" onClick={() => couponApplied()}>
-        Apply coupon
+        {isCouponApplied ? "Remove Coupon applied" : "Apply coupon"}
       </button>
+
       {cartData?.map(
         ({ id, name, description, price, image, delivery_time, inCart }) => (
           <div className="list-food-items" key={id}>

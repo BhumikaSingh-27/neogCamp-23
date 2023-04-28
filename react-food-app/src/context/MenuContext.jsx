@@ -4,18 +4,25 @@ import { fakeFetch } from "../api";
 export const MenuContext = createContext();
 
 export const MenuContextProvider = ({ children }) => {
+    const [state, setState] = useState({isLoading:false,isError:null})
   const [foodData, setFoodData] = useState([]);
-  const [selectedFood, setSelectedFood] = useState([]);
+  const [filterType, setFilterType] = useState([]);
+  const [searchText, setSearchText] = useState(null);
+  const [sortType, setSortType] = useState(null);
+
+  const exportData = { foodData, setFoodData }; //exporting the data state variable with setter function
 
   const getData = async (url) => {
+    setState({...state, isLoading:true})
     try {
       const response = await fakeFetch(url);
       if (response.status === 200) {
         setFoodData(response.data.menu);
-        setSelectedFood(response.data.menu);
+        setState({isError:null, isLoading:false})
       }
     } catch (e) {
       console.log(e);
+      setState({isError:e.message, isLoading:false})
     }
   };
 
@@ -23,39 +30,58 @@ export const MenuContextProvider = ({ children }) => {
     getData("https://example.com/api/menu");
   }, []);
 
-  const searchFood = (e) => {
-    const nameCheck = e.target.value;
-    const searchedFood = foodData.filter(({ name }) =>
-      name.toLowerCase().includes(nameCheck.toLowerCase())
-    );
-    console.log(searchedFood);
-    setSelectedFood(searchedFood);
-  };
-
   const selectType = (e) => {
-    // console.log(e.target.value)
-    if (e.target.checked && e.target.value === "veg") {
-      setSelectedFood(foodData.filter(({ is_vegetarian }) => is_vegetarian));
-    } else if (e.target.checked && e.target.value === "spicy") {
-      setSelectedFood(foodData.filter(({ is_spicy }) => is_spicy));
+    const value = e.target.value;
+    if (e.target.checked) {
+      setFilterType([...filterType, value]);
     } else {
-      setSelectedFood(foodData);
+      setFilterType(filterType.filter((ele) => ele !== value));
     }
   };
+
+  const selectedTypeData =
+    filterType.length !== 0
+      ? foodData.filter((item) => {
+          let flag = 0;
+          for (let type of filterType) {
+            if (item[type]) {
+              flag = 1;
+              continue;
+            } else {
+              return false;
+            }
+          }
+          if (flag) {
+            return true;
+          }
+          return false;
+        })
+      : [...foodData];
+
+  const searchFood = (e) => {
+    const val = e.target.value;
+    setSearchText(val);
+  };
+
+  const foodSearched = searchText
+    ? selectedTypeData.filter((item) =>
+        item.name.toLowerCase().includes(searchText.toLowerCase())
+      )
+    : [...selectedTypeData];
 
   const SortData = (e) => {
-    let sortedData = [];
-    if (e.target.value === "LtoH") {
-      sortedData = foodData.sort((a, b) => a.price - b.price);
-    } else {
-      sortedData = foodData.sort((a, b) => b.price - a.price);
-    }
-
-    setSelectedFood([...sortedData]);
+    setSortType(e.target.value);
   };
+
+  const finalData = sortType
+    ? [...foodSearched].sort((a, b) =>
+        sortType === "LH" ? a.price - b.price : b.price - a.price
+      )
+    : [...foodSearched];
+
   return (
     <MenuContext.Provider
-      value={{ foodData, selectedFood, searchFood, selectType, SortData,setSelectedFood }}
+      value={{ exportData, finalData, selectType, searchFood, SortData, state }}
     >
       {children}
     </MenuContext.Provider>

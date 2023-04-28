@@ -5,25 +5,24 @@ import { MenuContext } from "./MenuContext";
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
-  const { foodData, selectedFood, setSelectedFood } = useContext(MenuContext);
+  const { exportData } = useContext(MenuContext);
+
+  const { foodData, setFoodData } = exportData;
 
   const [cartData, setCartData] = useState([]);
   const [isCouponApplied, setisCouponApplied] = useState(false);
 
   const addFoodToCart = (itemId) => {
     const itemToadd = foodData.find(({ id }) => id === itemId);
+    setCartData([...cartData, { ...itemToadd, inCart: true }]);
 
-    const item = selectedFood.map((item) =>
+    const item = foodData.map((item) =>
       item.id === itemId ? { ...item, inCart: true } : item
     );
-
-    setCartData([...cartData, { ...itemToadd, inCart: true }]);
-    setSelectedFood(item);
-    // setTotalPrice(cartData.reduce((tot, cur) => cur.price + tot, 0))
-    console.log(cartData);
+    setFoodData(item);
   };
 
-  //   useEffect(()=>{},[])
+
   const couponApplied = () => {
     setisCouponApplied((isCouponApplied) => !isCouponApplied);
   };
