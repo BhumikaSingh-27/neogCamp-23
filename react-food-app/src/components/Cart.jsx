@@ -5,7 +5,7 @@ export const Cart = () => {
   const { cartData, couponApplied, isCouponApplied } = useContext(CartContext);
 
   const price = cartData.reduce((tot, cur) => cur.price + tot, 0);
-  const totalPrice = isCouponApplied ? price - 5 : price;
+  const totalPrice = isCouponApplied && price !== 0 ? price - 5 : price;
 
   let TotalDeliveryTime = cartData.reduce(
     (tot, cur) => cur.delivery_time + tot,
@@ -22,7 +22,9 @@ export const Cart = () => {
         onClick={() => setTotalPrice((totalPrice) => totalPrice - 5)}
       > */}
       <button id="inCart" onClick={() => couponApplied()}>
-        {isCouponApplied ? "Remove Coupon applied" : "Apply coupon"}
+        {isCouponApplied && price !== 0
+          ? "Remove Coupon applied"
+          : "Apply coupon"}
       </button>
 
       {cartData?.map(

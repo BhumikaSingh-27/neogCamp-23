@@ -4,7 +4,7 @@ import { fakeFetch } from "../api";
 export const MenuContext = createContext();
 
 export const MenuContextProvider = ({ children }) => {
-    const [state, setState] = useState({isLoading:false,isError:null})
+  const [state, setState] = useState({ isLoading: false, isError: null });
   const [foodData, setFoodData] = useState([]);
   const [filterType, setFilterType] = useState([]);
   const [searchText, setSearchText] = useState(null);
@@ -13,16 +13,16 @@ export const MenuContextProvider = ({ children }) => {
   const exportData = { foodData, setFoodData }; //exporting the data state variable with setter function
 
   const getData = async (url) => {
-    setState({...state, isLoading:true})
+    setState({ ...state, isLoading: true });
     try {
       const response = await fakeFetch(url);
       if (response.status === 200) {
         setFoodData(response.data.menu);
-        setState({isError:null, isLoading:false})
+        setState({ isError: null, isLoading: false });
       }
     } catch (e) {
       console.log(e);
-      setState({isError:e.message, isLoading:false})
+      setState({ isError: e.message, isLoading: false });
     }
   };
 
@@ -42,19 +42,13 @@ export const MenuContextProvider = ({ children }) => {
   const selectedTypeData =
     filterType.length !== 0
       ? foodData.filter((item) => {
-          let flag = 0;
           for (let type of filterType) {
-            if (item[type]) {
-              flag = 1;
-              continue;
-            } else {
+            //[is_veg,is_spicy]
+            if (!item[type]) {
               return false;
             }
           }
-          if (flag) {
-            return true;
-          }
-          return false;
+          return true;
         })
       : [...foodData];
 
