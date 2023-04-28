@@ -1,76 +1,43 @@
-div#img-div {
-    /* border: 2px solid black; */
+body {
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+
+.first {
     background-image: url("https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_1280.jpg");
-    height: 200px;
-    width: 400px;
-    box-sizing: content-box;
+    background-repeat: no-repeat;
     position: relative;
-    filter: blur(10px);
-    margin-bottom: -20px;
-
-
-}
-
-/* img{
-    filter: blur(10px);
-} */
-div#context {
-    position: relative;
-    bottom: 200px;
-    height: 300px;
-    margin-top: -40px;
-
-
-}
-
-/* img {
-    display: block;
-    height: 400px;
-    width: 500px;
-
-} */
-
-.Ques2 {
-    border: 1px solid grey;
-    border-radius: 0.5rem;
-    display: inline-block;
     box-sizing: border-box;
-    box-shadow: 2px 3px 2px 0.5px grey;
-    padding-bottom: 40px;
+    opacity: 0.5;
+    width: 500px;
+    height: 700px;
+    border-radius: 1rem;
+}
+
+.second {
+    background-image: url("https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_1280.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 700px;
+    width: 500px;
+    height: 500px;
 }
 
 .text {
-    width: max-content;
-    margin: auto;
-    /* box-sizing: border-box; */
-}
-
-div p {
-    font-size: 30px;
-    width: max-content;
-    margin: auto;
-
-}
-
-#q3 {
-    position: absolute;
-
-}
-
-#id {
-    background-image: url("https://cdn.britannica.com/37/154237-050-A76A506D/blue-peafowl-tail-Indian-peacock-courtship-displays.jpg");
-    box-sizing: content-box;
-    background-repeat: none;
-}
-
-#div-q3 {
     position: relative;
-    box-sizing: content-box;
-    width: fit-content;
-    top: 200px;
-    right: 0px;
-    left: 0px;
-    background-color: black;
-    color: grey;
-    padding: 20px;
+    top: -700px;
+    /* margin: auto; */
+    left: 200px;
+    right: 200px;
 }
+
+.text p {
+    position: relative;
+    font-size: 30px;
+    color: rgb(59, 52, 52);
+    right: 30px;
+
+}
+
+.Ques2 {}
