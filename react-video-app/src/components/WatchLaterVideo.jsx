@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { VideoContext } from "../contexts/VideoContext";
 
 export const WatchLaterVideo = () => {
@@ -46,7 +47,8 @@ export const WatchLaterVideo = () => {
       {videoData.filter(({ inWatchList }) => inWatchList).length === 0 && (
         <h1>
           You haven't saved anything yet..
-          <br /> Go back to videos page to explore more!
+          <br /> Go back to <NavLink to="/videos">videos</NavLink> page to
+          explore more!
         </h1>
       )}
     </>

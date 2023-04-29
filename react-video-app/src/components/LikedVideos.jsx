@@ -5,6 +5,7 @@ export const LikedVideos = () => {
   const { videoData, addToWatchList } = useContext(VideoContext);
   return (
     <>
+      <h2>Find your Liked Video here...</h2>
       {videoData
         .filter(({ liked }) => liked)
         .map(
@@ -20,7 +21,6 @@ export const LikedVideos = () => {
           }) => (
             <div key={id}>
               {" "}
-              <h2>Find your Liked Video here...❤️</h2>
               <div className="container" key={id}>
                 <a href={url}>
                   {" "}
