@@ -11,7 +11,6 @@
 
 // // console.log(birthday ({name:"bhumika",age:36}))
 
-
 // // //Write an ES6 function increaseStock() to take a products’s name and quantity in an object and then increase the quantity by 5.
 
 // // const increaseStock = product =>({...product, quantity: product.quantity+5})
@@ -37,7 +36,7 @@
 // // //---------------filter-----------------
 // // //to get the odd numbers in an array
 // // const numbers=[1,3,5,7,28,12]
-// // const isOdd = num => num%2 != 0 
+// // const isOdd = num => num%2 != 0
 // // const checkOdd = numbers => numbers.filter(isOdd) //callback function should contain boolean values.
 // // console.log(checkOdd(numbers))
 
@@ -48,7 +47,7 @@
 // // console.log(newArrayWithNumbersMoreThan10(numbers))
 
 // // //--------------Find------------
-// // // first element that satisfy the condition 
+// // // first element that satisfy the condition
 // // //Write an ES6 function that takes an array, and returns the first even number in the array.
 // // const numbers = [5, 12, 8, 13, 44]
 
@@ -163,19 +162,17 @@
 
 // // console.log(getOutput([1, 2, 3, 4, 5]));
 
-
-// // //write a function getArea which will accept either one or two arguments 
+// // //write a function getArea which will accept either one or two arguments
 // // // and return the area of geometrical figure.
 
-// // // if function is called with one arguments then consider it as side of square 
-// // // and 
-// // //   if it is called with two arguments then consider it as 
+// // // if function is called with one arguments then consider it as side of square
+// // // and
+// // //   if it is called with two arguments then consider it as
 // // // length and breadth of rectangle
 
 // // // sample eg.
 // // // console.log(getArea(4)) // output : 16
 // // // console.log(getArea(4,8)) // output : 32
-
 
 // // const getArea = (first,second) =>{
 // //     if(!second){
@@ -213,8 +210,8 @@
 // // console.log(factorial2(5))
 
 // // //========================
-// // // write a function which will take `n` (provided n>=2) numbers as an argument 
-// // // and will return the the sum of factorial of all the numbers 
+// // // write a function which will take `n` (provided n>=2) numbers as an argument
+// // // and will return the the sum of factorial of all the numbers
 
 // // // eg.
 
@@ -234,12 +231,11 @@
 
 // // //=====
 // // function fakeFetch(msg, shouldReject)
-// //  { return new Promise((resolve, reject) => 
-// //   { setTimeout(() => 
-// //     { if (shouldReject) { reject(`error from server: ${msg}`); 
-// //   } resolve(`from server: ${msg}`); 
+// //  { return new Promise((resolve, reject) =>
+// //   { setTimeout(() =>
+// //     { if (shouldReject) { reject(`error from server: ${msg}`);
+// //   } resolve(`from server: ${msg}`);
 // // }, 3000); }); }
-
 
 // // fakeFetch("bumika",true)
 // // .then(data=>console.log(`the dats is ${data}`))
@@ -265,7 +261,6 @@
 // } ,[])
 
 // console.log(fancyArray(letterArray))
-
 
 // //==================
 // // Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
@@ -295,9 +290,8 @@
 // //   return (arr.sort().join(""))
 
 // //   }
-  
-// //   console.log(longest(a,b))
 
+// //   console.log(longest(a,b))
 
 // // ============
 
@@ -309,7 +303,7 @@
 //           // console.log(i)
 //           sumOfInt += i
 //       }else{
-          
+
 //           //ssumOfStr += parseInt(i)
 //           sumOfStr =+ Number(i)
 //           // sumOfStr+= +i
@@ -321,7 +315,6 @@
 
 // calculateSum([9, 3, '7', '3'])
 // calculateSum(['5', '0', 9, 3, 2, 1, '9', 6, 7])
-
 
 //
 
@@ -353,7 +346,6 @@
 //          return cur
 //      })
 //  }
- 
 
 //   const neogCommunity = [
 //     { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
@@ -365,7 +357,7 @@
 //     { name: "Rohan", role: "mentor", hours: [1, 2, 3, 12, 2, 3, 0] },
 //     { name: "Mohan", role: "student", hours: [1, 8, 3, 0, 2, 3, 0] }
 //   ];
-  
+
 //   console.log(mostActivePerson(neogCommunity));
 
 //===========================================
@@ -384,7 +376,7 @@
 // // // return (arr.reduce((acc,cur) => cur % 2 === 0 ? acc+=cur : acc,0)) ?? 0
 
 // // // console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6])) // 12
-// // console.log(sumOfEvenNumbers([])) // 0       
+// // console.log(sumOfEvenNumbers([])) // 0
 
 // //===================
 // // your ES6+ code here
@@ -402,7 +394,7 @@
 
 //   const tagRegularStudents = (arr) => {
 //     // Your ES6+ code here
-  
+
 //     return arr.map((element) => {
 //       if (element.role === "student") {
 //         const totalActiveHours = element.hours.reduce((acc, cur) => acc + cur);
@@ -413,7 +405,7 @@
 //       return element;
 //     });
 //   };
-  
+
 //   console.log(tagRegularStudents(neogCommunity))
 //   // Output: [
 //   //   { name: "Raju", role: "student", hours: [1, 2, 3, 1, 2, 3, 0] },
@@ -440,27 +432,24 @@
 // //   console.log(sumOfEvenNumbers([1, 3, 5]));
 //   console.log(sumOfEvenNumbers([undefined, 1, 2, 3, 4, undefined, 6]))
 
-
 // ============
 // your ES6+ code here
 
-const employees = [
-    { name: 'Raju', salary: 154, role: 'dev' },
-    { name: 'Aakash', salary: 200, role: 'dev' },
-    { name: 'Ramesh', salary: 3077, role: 'pm' },
-    { name: 'Jiten', salary: 487, role: 'qa' },
-  ]
-  
-  const filterBySalary = arr => arr.reduce((acc,cur)=> {
-    if(cur.salary % 2 === 0){
-        return [...acc,cur.name]
-    }
-    return acc
-  },[])
-  console.log(filterBySalary(employees)) // Output: ["Raju", "Aakash"]
-            
-            
-            
+// const employees = [
+//     { name: 'Raju', salary: 154, role: 'dev' },
+//     { name: 'Aakash', salary: 200, role: 'dev' },
+//     { name: 'Ramesh', salary: 3077, role: 'pm' },
+//     { name: 'Jiten', salary: 487, role: 'qa' },
+//   ]
+
+//   const filterBySalary = arr => arr.reduce((acc,cur)=> {
+//     if(cur.salary % 2 === 0){
+//         return [...acc,cur.name]
+//     }
+//     return acc
+//   },[])
+//   console.log(filterBySalary(employees)) // Output: ["Raju", "Aakash"]
+
 // Your ES6+ code here
 
 // const products = [
@@ -476,1218 +465,71 @@ const employees = [
 //     }
 //     return acc
 //   },[])
-  
+
 //   console.log(filterProducts(products)) // Output: ["Hoodie", "Slipper"]
-            
 
-  // Your ES6+ code here
-
-const products = [
-    { name: 'Bread', price: 480, quantity: 3 },
-    { name: 'Clips', price: 200, quantity: 5 },
-    { name: 'green Bread Knife', price: 3077, quantity: 1 },
-    { name: 'Slipper', price: 150, quantity: 2 },
-  ]
-  
-  const filterByKeyword = arr => arr.reduce((acc,cur)=> cur.name.toLowerCase().includes("bread") ? [...acc,cur.name] : acc,[])
-  console.log(filterByKeyword(products))
-  // Output: ["Bread", "green Bread Knife"]
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-     
+// const products = [
+//     { name: 'Bread', price: 480, quantity: 3 },
+//     { name: 'Clips', price: 200, quantity: 5 },
+//     { name: 'green Bread Knife', price: 3077, quantity: 1 },
+//     { name: 'Slipper', price: 150, quantity: 2 },
+//   ]
+
+//   const filterByKeyword = arr => arr.reduce((acc,cur)=> cur.name.toLowerCase().includes("bread") ? [...acc,cur.name] : acc,[])
+//   console.log(filterByKeyword(products))
+//   // Output: ["Bread", "green Bread Knife"]
+
+//=============useReduce==============
+//find odd and even sum
+const numList = [1, 3, 55, 22, 44];
+
+function oddAndEvenSumReducer(acc, value) {
+  if (value % 2 !== 0) {
+    return { ...acc, odd: acc.odd + value };
+  } else {
+    return { ...acc, even: acc.even + value };
+  }
+}
+
+const oddAndEvenSum = numList.reduce(oddAndEvenSumReducer, { even: 0, odd: 0 });
+console.log(oddAndEvenSum);
+
+const numList2 = [
+  { type: "odd", payload: 1 },
+  { type: "odd", payload: 3 },
+  { type: "odd", payload: 55 },
+  { type: "even", payload: 22 },
+  { type: "even", payload: 44 },
+];
+
+const calculateSum = (acc, cur) => {
+  if (cur.type === "odd") {
+    return { ...acc, odd: cur.payload + acc.odd };
+  } else {
+    return { ...acc, even: acc.even + cur.payload };
+  }
+};
+
+// const reducer = (state,action)=>{
+//   if(action.type==='even'){
+//     return {...state,even:state.even+action.payload}
+//   }else{
+//     return {...state, odd:state.odd+action.payload}
+//   }
+// }
+
+const state = { even: 0, odd: 0 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "even":
+      return { ...state, even: action.payload + state.even };
+    case "odd":
+      return { ...state, odd: action.payload + state.odd };
+    default:
+      return state;
+  }
+};
+const sumOfOddEven = numList2.reduce(reducer, state);
+
+console.log(sumOfOddEven);
