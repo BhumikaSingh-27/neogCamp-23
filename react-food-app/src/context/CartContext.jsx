@@ -12,19 +12,31 @@ export const CartContextProvider = ({ children }) => {
   const [cartData, setCartData] = useState([]);
   const [isCouponApplied, setisCouponApplied] = useState(false);
 
-  const addFoodToCart = (itemId) => {
-    const itemToadd = foodData.find(({ id }) => id === itemId);
-    setCartData([...cartData, { ...itemToadd, inCart: true }]);
+  const addFoodToCart = (e, itemId) => {
+    if (e.target.innerText === "Add to Cart") {
+      const itemToadd = foodData.find(({ id }) => id === itemId);
+      setCartData([...cartData, { ...itemToadd, inCart: true }]);
 
-    const item = foodData.map((item) =>
-      item.id === itemId ? { ...item, inCart: true } : item
-    );
-    setFoodData(item);
+      const item = foodData.map((item) =>
+        item.id === itemId ? { ...item, inCart: true } : item
+      );
+      setFoodData(item);
+    }
   };
-
 
   const couponApplied = () => {
     setisCouponApplied((isCouponApplied) => !isCouponApplied);
+  };
+
+  const incrementOrder = (foodId) => {
+    const add = foodData.find(({ id }) => id === foodId);
+    setCartData((cartData) => [...cartData, add]);
+  };
+
+  const decrementOrder = (foodId) => {
+    const removeItems = cartData.filter(({ id }) => id === foodId);
+    removeItems.shift();
+    setCartData(removeItems);
   };
 
   return (
@@ -34,6 +46,8 @@ export const CartContextProvider = ({ children }) => {
         isCouponApplied,
         addFoodToCart,
         couponApplied,
+        incrementOrder,
+        decrementOrder,
       }}
     >
       {children}

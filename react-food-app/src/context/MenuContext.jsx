@@ -28,7 +28,7 @@ export const MenuContextProvider = ({ children }) => {
 
   useEffect(() => {
     getData("https://example.com/api/menu");
-  }, []);
+  },[]);
 
   const selectType = (e) => {
     const value = e.target.value;

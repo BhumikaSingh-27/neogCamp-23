@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { MenuContext } from "../context/MenuContext";
 import { CartContext } from "../context/CartContext";
 
@@ -40,30 +41,40 @@ export const Menu = () => {
             <input type="radio" value="HL" name="sorting" onChange={SortData} />
             Sort(price) High to Low
           </header>
-          {finalData?.map(
-            ({
-              id,
-              name,
-              description,
-              price,
-              image,
-              delivery_time,
-              inCart,
-            }) => (
-              <div className="list-food-items" key={id}>
-                <img src={image} alt={name} width="200px" height="200px" />
-                <p>Name: {name}</p>
-                <p>
-                  <b>Description:</b>
-                  {description} {name}
-                </p>
-                <p>Price: {price}</p>
-                <p>Delivery Time: {delivery_time}</p>
-                <button onClick={() => addFoodToCart(id)}>
-                  {inCart ? "Go to Cart" : "Add to Cart"}
-                </button>
-              </div>
+          {finalData.length ? (
+            finalData?.map(
+              ({
+                id,
+                name,
+                description,
+                price,
+                image,
+                delivery_time,
+                inCart,
+              }) => (
+                <div className="list-food-items" key={id}>
+                  <img src={image} alt={name} width="200px" height="200px" />
+                  <p>Name: {name}</p>
+                  <p>
+                    <b>Description:</b>
+                    {description} {name}
+                  </p>
+                  <p>Price: {price}</p>
+                  <p>Delivery Time: {delivery_time}</p>
+                  <button onClick={(e) => addFoodToCart(e, id)}>
+                    {inCart ? (
+                      <NavLink style={{ textDecoration: "none" }} to="/cart">
+                        Go to Cart
+                      </NavLink>
+                    ) : (
+                      "Add to Cart"
+                    )}
+                  </button>
+                </div>
+              )
             )
+          ) : (
+            <h3>No Data found.</h3>
           )}{" "}
         </>
       )}
