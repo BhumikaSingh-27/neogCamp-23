@@ -53,7 +53,7 @@ export const Cart = () => {
               <p>Delivery Time: {delivery_time}</p>
               <p>
                 <button onClick={() => incrementOrder(id)}>+</button>
-                {cartData.filter(({ id }) => id).length}
+                {cartData.find(({ id }) => id).count || 1}
                 <button onClick={() => decrementOrder(id)}>-</button>
               </p>
             </div>

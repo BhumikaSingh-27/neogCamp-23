@@ -30,7 +30,13 @@ export const CartContextProvider = ({ children }) => {
 
   const incrementOrder = (foodId) => {
     const add = foodData.find(({ id }) => id === foodId);
-    setCartData((cartData) => [...cartData, add]);
+    console.log(add);
+    const addItem = cartData.map((item) =>
+      item.id === foodId ? { ...item, count: (item?.count ?? 1) + 1 } : item
+    );
+    setCartData(addItem);
+    // setCartData((cartData) => [...cartData, add]);
+    console.log(cartData)
   };
 
   const decrementOrder = (foodId) => {
