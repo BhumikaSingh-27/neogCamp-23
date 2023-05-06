@@ -26,6 +26,7 @@ export const InboxContextProvider = ({ children }) => {
   }, []);
 
   console.log(emailData);
+  
   const markEmailAsRead = (checkId) => {
     const email = emailData.map((data) =>
       data.id === checkId ? { ...data, read: !data.read } : data
