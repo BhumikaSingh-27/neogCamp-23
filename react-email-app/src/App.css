@@ -1,0 +1,56 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+
+.email-container {
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin: 1rem;
+  ;
+}
+
+.email-container:hover {
+  box-shadow: 4px 4px 5px 5px gray;
+}
