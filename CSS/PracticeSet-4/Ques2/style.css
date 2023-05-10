@@ -8,12 +8,10 @@
 .main {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
     align-items: center;
     justify-content: center;
-    max-width: 50%;
-    padding: 5rem;
-    /* box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.2); */
+    min-width: 40%;
+    padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
 }
@@ -49,5 +47,19 @@ button {
     background-color: #2563eb;
     color: white;
     border: none;
+
+}
+
+#link {
+    align-self: center;
+    margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #2563eb;
+    font-size: 1.3rem;
+    font-weight: 400;
+
 
 }
