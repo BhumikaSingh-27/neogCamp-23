@@ -55,7 +55,7 @@ button {
 }
 
 div {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
     background: #ffffff;
     margin: 20px;
     border-radius: 5px;
@@ -94,9 +94,9 @@ div p {
     border-radius: 10px;
 }
 
-#ques7{
+#ques7 {
     width: 400px;
-    height:40px;
+    height: 40px;
     border: 1px solid #cccccc;
     margin: 10px 0px 10px 0px;
     padding: 0px 20px 0px 20px;

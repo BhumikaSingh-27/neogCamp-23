@@ -1,0 +1,53 @@
+.top-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    padding: 5rem;
+    /* box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+input {
+    height: 40px;
+    border: 1px solid #cccccc;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 20px 0px 20px;
+    font-family: 'Open Sans';
+    font-weight: 400px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    margin-top: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+
+}
