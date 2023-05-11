@@ -1,0 +1,60 @@
+body {
+    display: flex;
+
+    font-family: 'Open Sans';
+
+}
+
+.main {
+    border: 5px solid #22c55e;
+    min-width: 500px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.price p,
+h3 {
+    margin: 5px;
+    ;
+
+}
+
+#h3 {
+    margin: 0px;
+}
+
+.total {
+    gap: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #22c55e;
+    border: none;
+}
+
+.footer {
+    align-self: center;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+    /* padding: 1rem; */
+}

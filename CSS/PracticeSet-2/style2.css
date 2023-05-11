@@ -95,9 +95,8 @@ a {
 }
 
 hr {
-
-    size: 10px;
-    width: 300px;
+     size: 10px;
+     width: 300px;
 }
 
 .signup {
@@ -105,14 +104,13 @@ hr {
     color: white;
     border-radius: 0.5rem;
     font-size: 20px;
-    ;
     padding: 1rem
 }
 
 .para {
     color: gray;
     font-size: 30px;
-    ;
+
 }
 
 .ques5 {

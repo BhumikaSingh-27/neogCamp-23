@@ -1,0 +1,57 @@
+.main {
+    display: flex;
+    gap: 2rem;
+    /* justify-content: space-around; */
+}
+
+.container {
+    /* border: 1px solid black; */
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    /* width: 200px;
+    height: 400px; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#small-container {
+    border: 2px solid black;
+    padding: 0.5rem
+}
+
+#small-container p {
+    margin: 0px;
+}
+
+h1 {
+    margin-bottom: 0
+}
+
+#price {
+    background-color: #e4e4e7;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin: 10px;
+
+}
+
+hr {
+    width: 100%;
+}
+
+.para {
+    color: gray;
+    font-size: 1.2rem;
+
+}
+
+.signup {
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+}
